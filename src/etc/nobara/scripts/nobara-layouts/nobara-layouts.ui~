@@ -773,6 +773,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="halign">start</property>
+                                <signal name="notify::active" handler="on_hid_switch_active_notify" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>

@@ -57,12 +57,10 @@ class Application:
     
         if (desktop_output.returncode) == 0:
             desktop_switch.set_active(True)
-    
-    #if startup_file.is_file():
-    #    desktop_switch.set_active(True)
-    
-    #def on_desktop_switch_active_notify(self, switch, state):
-    #    if switch.get_active():
+        
+    def on_desktop_switch_active_notify(self, switch, state):
+        if switch.get_active() == True :
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/desktop.sh"], shell=True)
     
 Application()
 Gtk.main()
