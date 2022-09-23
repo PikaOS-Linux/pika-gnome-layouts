@@ -34,18 +34,35 @@ class Application:
         win10toggle.set_active(True)
         win10toggle.pressed()
         
-        
+    ### Layouts ###
     
-    def test1(self, widget):
-        print("test1")
-        settings = Gio.Settings.new("org.nobara.layouts")
-        settings.set_int("layout-num", 3)
-    def test2(self, widget):
-        print("test2")
-    def test3(self, widget):
-        print("test3")
-    def test4(self, widget):
-        print("test4")
+        def test1(self, widget):
+            print("test1")
+            settings = Gio.Settings.new("org.nobara.layouts")
+            settings.set_int("layout-num", 3)
+        def test2(self, widget):
+            print("test2")
+        def test3(self, widget):
+            print("test3")
+        def test4(self, widget):
+            print("test4")
+        
+    ### Settings ###
+    
+    #### Desktop Switch ####
+        
+        desktop_switch = self.builder.get_object("desktop_switch")
+        
+        desktop_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep ding@rastersoft.com"], shell=True)
+    
+        if (desktop_output.returncode) == 0:
+            desktop_switch.set_active(True)
+    
+    #if startup_file.is_file():
+    #    desktop_switch.set_active(True)
+    
+    #def on_desktop_switch_active_notify(self, switch, state):
+    #    if switch.get_active():
     
 Application()
 Gtk.main()
