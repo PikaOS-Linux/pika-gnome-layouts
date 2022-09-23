@@ -62,5 +62,59 @@ class Application:
         if switch.get_active() == True :
             subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/desktop.sh"], shell=True)
     
+    #### Audio Switch ####
+        
+        audio_switch = self.builder.get_object("audio_switch")
+        
+        audio_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep volume-mixer@evermiss.net"], shell=True)
+    
+        if (audio_output.returncode) == 0:
+            audio_switch.set_active(True)
+        
+    def on_audio_switch_active_notify(self, switch, state):
+        if switch.get_active() == True :
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/audio.sh"], shell=True)
+
+    #### Blur Switch ####
+        
+        blur_switch = self.builder.get_object("blur_switch")
+        
+        blur_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep blur-my-shell@aunetx"], shell=True)
+    
+        if (blur_output.returncode) == 0:
+            blur_switch.set_active(True)
+        
+    def on_blur_switch_active_notify(self, switch, state):
+        if switch.get_active() == True :
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/blur.sh"], shell=True)
+
+    #### Tray Switch ####
+        
+        tray_switch = self.builder.get_object("tray_switch")
+        
+        tray_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep trayIconsReloaded@selfmade.pl"], shell=True)
+    
+        if (tray_output.returncode) == 0:
+            tray_switch.set_active(True)
+        
+    def on_tray_switch_active_notify(self, switch, state):
+        if switch.get_active() == True :
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/tray.sh"], shell=True)
+
+    #### workspace Switch ####
+        
+        workspace_switch = self.builder.get_object("workspace_switch")
+        
+        workspace_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep auto-move-windows@gnome-shell-extensions.gcampax.github.com"], shell=True)
+    
+        if (workspace_output.returncode) == 0:
+            workspace_switch.set_active(True)
+        
+    def on_workspace_switch_active_notify(self, switch, state):
+        if switch.get_active() == True :
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/workspace.sh"], shell=True)
+            
+            
+
 Application()
 Gtk.main()
