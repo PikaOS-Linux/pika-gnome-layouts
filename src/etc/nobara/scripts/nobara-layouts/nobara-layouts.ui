@@ -289,6 +289,19 @@
                             <property name="hexpand">True</property>
                             <property name="homogeneous">True</property>
                             <child>
+                              <object class="GtkSwitch" id="desktop_switch">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="halign">start</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
                               <object class="GtkLabel" id="desktop_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
@@ -300,19 +313,6 @@
                                 <property name="fill">True</property>
                                 <property name="padding">10</property>
                                 <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkSwitch" id="desktop_switch">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="halign">end</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="padding">10</property>
-                                <property name="position">2</property>
                               </packing>
                             </child>
                           </object>
@@ -328,6 +328,19 @@
                             <property name="hexpand">True</property>
                             <property name="homogeneous">True</property>
                             <child>
+                              <object class="GtkSwitch" id="blur_switch">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="halign">start</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
                               <object class="GtkLabel" id="blur_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
@@ -339,19 +352,6 @@
                                 <property name="fill">True</property>
                                 <property name="padding">10</property>
                                 <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkSwitch" id="blur_switch">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="halign">end</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="padding">10</property>
-                                <property name="position">2</property>
                               </packing>
                             </child>
                           </object>
@@ -367,6 +367,19 @@
                             <property name="hexpand">True</property>
                             <property name="homogeneous">True</property>
                             <child>
+                              <object class="GtkSwitch" id="audio_switch">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="halign">start</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
                               <object class="GtkLabel" id="audio_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
@@ -378,19 +391,6 @@
                                 <property name="fill">True</property>
                                 <property name="padding">10</property>
                                 <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkSwitch" id="audio_switch">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="halign">end</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="padding">10</property>
-                                <property name="position">2</property>
                               </packing>
                             </child>
                           </object>
@@ -406,6 +406,19 @@
                             <property name="hexpand">True</property>
                             <property name="homogeneous">True</property>
                             <child>
+                              <object class="GtkSwitch" id="tray_switch">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="halign">start</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
                               <object class="GtkLabel" id="tray_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
@@ -417,19 +430,6 @@
                                 <property name="fill">True</property>
                                 <property name="padding">10</property>
                                 <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkSwitch" id="tray_switch">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="halign">end</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="padding">10</property>
-                                <property name="position">2</property>
                               </packing>
                             </child>
                           </object>
@@ -445,6 +445,19 @@
                             <property name="hexpand">True</property>
                             <property name="homogeneous">True</property>
                             <child>
+                              <object class="GtkSwitch" id="workspace_switch">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="halign">start</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
                               <object class="GtkLabel" id="workspace_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
@@ -456,19 +469,6 @@
                                 <property name="fill">True</property>
                                 <property name="padding">10</property>
                                 <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkSwitch" id="workspace_switch">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="halign">end</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="padding">10</property>
-                                <property name="position">2</property>
                               </packing>
                             </child>
                           </object>
@@ -484,6 +484,19 @@
                             <property name="hexpand">True</property>
                             <property name="homogeneous">True</property>
                             <child>
+                              <object class="GtkSwitch" id="x11_switch">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="halign">start</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
                               <object class="GtkLabel" id="x11_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
@@ -495,19 +508,6 @@
                                 <property name="fill">True</property>
                                 <property name="padding">10</property>
                                 <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkSwitch" id="x11_switch">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="halign">end</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="padding">10</property>
-                                <property name="position">2</property>
                               </packing>
                             </child>
                           </object>
@@ -523,6 +523,19 @@
                             <property name="hexpand">True</property>
                             <property name="homogeneous">True</property>
                             <child>
+                              <object class="GtkSwitch" id="clipboard_switch">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="halign">start</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
                               <object class="GtkLabel" id="clipboard_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
@@ -534,19 +547,6 @@
                                 <property name="fill">True</property>
                                 <property name="padding">10</property>
                                 <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkSwitch" id="clipboard_switch">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="halign">end</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="padding">10</property>
-                                <property name="position">2</property>
                               </packing>
                             </child>
                           </object>
@@ -562,6 +562,19 @@
                             <property name="hexpand">True</property>
                             <property name="homogeneous">True</property>
                             <child>
+                              <object class="GtkSwitch" id="caffine_switch">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="halign">start</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
                               <object class="GtkLabel" id="caffine_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
@@ -575,62 +588,10 @@
                                 <property name="position">1</property>
                               </packing>
                             </child>
-                            <child>
-                              <object class="GtkSwitch" id="caffine_switch">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="halign">end</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="padding">10</property>
-                                <property name="position">2</property>
-                              </packing>
-                            </child>
                           </object>
                           <packing>
                             <property name="left-attach">1</property>
                             <property name="top-attach">3</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkBox" id="clipboard_box1">
-                            <property name="visible">True</property>
-                            <property name="can-focus">False</property>
-                            <property name="hexpand">True</property>
-                            <property name="homogeneous">True</property>
-                            <child>
-                              <object class="GtkLabel" id="clipboard_text1">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="label" translatable="yes">Enable GPU Controls</property>
-                                <property name="xalign">0</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="padding">10</property>
-                                <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkSwitch" id="clipboard_switch1">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="halign">end</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="padding">10</property>
-                                <property name="position">2</property>
-                              </packing>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="left-attach">0</property>
-                            <property name="top-attach">4</property>
                           </packing>
                         </child>
                         <child>
@@ -639,6 +600,19 @@
                             <property name="can-focus">False</property>
                             <property name="hexpand">True</property>
                             <property name="homogeneous">True</property>
+                            <child>
+                              <object class="GtkSwitch" id="kde_switch">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="halign">start</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
                             <child>
                               <object class="GtkLabel" id="kde_text">
                                 <property name="visible">True</property>
@@ -651,19 +625,6 @@
                                 <property name="fill">True</property>
                                 <property name="padding">10</property>
                                 <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkSwitch" id="kde_switch">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="halign">end</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="padding">10</property>
-                                <property name="position">2</property>
                               </packing>
                             </child>
                           </object>
@@ -679,6 +640,19 @@
                             <property name="hexpand">True</property>
                             <property name="homogeneous">True</property>
                             <child>
+                              <object class="GtkSwitch" id="spacebar_switch">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="halign">start</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
                               <object class="GtkLabel" id="spacebar_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
@@ -690,19 +664,6 @@
                                 <property name="fill">True</property>
                                 <property name="padding">10</property>
                                 <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkSwitch" id="spacebar_switch">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="halign">end</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="padding">10</property>
-                                <property name="position">2</property>
                               </packing>
                             </child>
                           </object>
@@ -718,6 +679,19 @@
                             <property name="hexpand">True</property>
                             <property name="homogeneous">True</property>
                             <child>
+                              <object class="GtkSwitch" id="weather_switch">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="halign">start</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
                               <object class="GtkLabel" id="weather_text">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
@@ -731,19 +705,6 @@
                                 <property name="position">1</property>
                               </packing>
                             </child>
-                            <child>
-                              <object class="GtkSwitch" id="weather_switch">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="halign">end</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="padding">10</property>
-                                <property name="position">2</property>
-                              </packing>
-                            </child>
                           </object>
                           <packing>
                             <property name="left-attach">0</property>
@@ -751,10 +712,121 @@
                           </packing>
                         </child>
                         <child>
-                          <placeholder/>
+                          <object class="GtkBox" id="stats_box">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="hexpand">True</property>
+                            <property name="homogeneous">True</property>
+                            <child>
+                              <object class="GtkSwitch" id="stats_switch">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="halign">start</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="stats_text">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">Enable Stats &amp; Temp Indicator</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="left-attach">0</property>
+                            <property name="top-attach">6</property>
+                          </packing>
                         </child>
                         <child>
-                          <placeholder/>
+                          <object class="GtkBox" id="hid_box">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="hexpand">True</property>
+                            <property name="homogeneous">True</property>
+                            <child>
+                              <object class="GtkSwitch" id="hid_switch">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="halign">start</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="hid_text">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">Enable Wireless HID Indicator</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="left-attach">1</property>
+                            <property name="top-attach">6</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="supergfxctl_box">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="hexpand">True</property>
+                            <property name="homogeneous">True</property>
+                            <child>
+                              <object class="GtkSwitch" id="supergfxctl_switch">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="halign">start</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="supergfxctl_text">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">Enable GPU Controls</property>
+                                <property name="xalign">0</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="padding">10</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="left-attach">0</property>
+                            <property name="top-attach">4</property>
+                          </packing>
                         </child>
                         <child>
                           <placeholder/>
