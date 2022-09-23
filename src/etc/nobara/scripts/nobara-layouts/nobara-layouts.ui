@@ -93,7 +93,7 @@
                                 <property name="active">True</property>
                                 <property name="draw-indicator">True</property>
                                 <property name="group">radiobutton1</property>
-                                <signal name="pressed" handler="test1" swapped="no"/>
+                                <signal name="pressed" handler="on_win10_button_pressed" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -142,7 +142,7 @@
                                 <property name="active">True</property>
                                 <property name="draw-indicator">True</property>
                                 <property name="group">radiobutton1</property>
-                                <signal name="pressed" handler="test3" swapped="no"/>
+                                <signal name="pressed" handler="on_gnome_button_pressed" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -191,7 +191,7 @@
                                 <property name="active">True</property>
                                 <property name="draw-indicator">True</property>
                                 <property name="group">radiobutton1</property>
-                                <signal name="pressed" handler="test2" swapped="no"/>
+                                <signal name="pressed" handler="on_win11_button_pressed" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -240,7 +240,7 @@
                                 <property name="active">True</property>
                                 <property name="draw-indicator">True</property>
                                 <property name="group">radiobutton1</property>
-                                <signal name="pressed" handler="test4" swapped="no"/>
+                                <signal name="pressed" handler="on_macos_button_pressed" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -293,6 +293,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="halign">start</property>
+                                <signal name="notify::active" handler="on_desktop_switch_active_notify" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -332,6 +333,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="halign">start</property>
+                                <signal name="notify::active" handler="on_blur_switch_active_notify" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -371,6 +373,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="halign">start</property>
+                                <signal name="notify::active" handler="on_audio_switch_active_notify" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -410,6 +413,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="halign">start</property>
+                                <signal name="notify::active" handler="on_tray_switch_active_notify" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -449,6 +453,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="halign">start</property>
+                                <signal name="notify::active" handler="on_workspace_switch_active_notify" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -488,6 +493,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="halign">start</property>
+                                <signal name="notify::active" handler="on_x11_switch_active_notify" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -527,6 +533,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="halign">start</property>
+                                <signal name="notify::active" handler="on_clipboard_switch_active_notify" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -566,6 +573,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="halign">start</property>
+                                <signal name="notify::active" handler="on_caffine_switch_active_notify" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -605,6 +613,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="halign">start</property>
+                                <signal name="notify::active" handler="on_kde_switch_active_notify" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -644,6 +653,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="halign">start</property>
+                                <signal name="notify::active" handler="on_spacebar_switch_active_notify" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -683,6 +693,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="halign">start</property>
+                                <signal name="notify::active" handler="on_weather_switch_active_notify" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -722,6 +733,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="halign">start</property>
+                                <signal name="notify::active" handler="on_stats_switch_active_notify" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -761,6 +773,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="halign">start</property>
+                                <signal name="notify::active" handler="on_hid_switch_active_notify" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -800,6 +813,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="halign">start</property>
+                                <signal name="notify::active" handler="on_supergfxctl_switch_active_notify" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
