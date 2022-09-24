@@ -2,8 +2,8 @@
 
 # Get needed extensions into userland
 
-if [[ $1 == enable[[ $ALL != True ]]]; then
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/auto-move-windows@gnome-shell-extensions.gcampax.github.com"[[ $ALL != True ]]; then
+if [[ $1 == enable ]]; then
+	if [ -d "$HOME/.local/share/gnome-shell/extensions/auto-move-windows@gnome-shell-extensions.gcampax.github.com" ]; then
 		echo "workspace already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable auto-move-windows@gnome-shell-extensions.gcampax.github.com

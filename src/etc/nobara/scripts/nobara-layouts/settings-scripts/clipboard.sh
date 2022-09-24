@@ -2,8 +2,8 @@
 
 # Get needed extensions into userland
 
-if [[ $1 == enable[[ $ALL != True ]]]; then
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/gnome-clipboard@b00f.github.io"[[ $ALL != True ]]; then
+if [[ $1 == enable ]]; then
+	if [ -d "$HOME/.local/share/gnome-shell/extensions/gnome-clipboard@b00f.github.io" ]; then
 		echo "clipboard already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable gnome-clipboard@b00f.github.io

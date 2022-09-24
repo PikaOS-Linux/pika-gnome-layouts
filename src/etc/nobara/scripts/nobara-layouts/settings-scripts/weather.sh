@@ -2,8 +2,8 @@
 
 # Get needed extensions into userland
 
-if [[ $1 == enable[[ $ALL != True ]]]; then
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/openweather-extension@jenslody.de"[[ $ALL != True ]]; then
+if [[ $1 == enable ]]; then
+	if [ -d "$HOME/.local/share/gnome-shell/extensions/openweather-extension@jenslody.de" ]; then
 		echo "weather already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable openweather-extension@jenslody.de
