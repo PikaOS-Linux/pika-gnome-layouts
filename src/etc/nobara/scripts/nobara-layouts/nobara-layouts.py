@@ -189,10 +189,8 @@ class Application:
     pass
     #### stats Switch ####
     def on_stats_switch_active_notify(self, switch, state):
-        if stats_switch.get_active() == True:
+        if switch.get_active() == True:
                 subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/stats.sh"], shell=True)
-        else:
-                print("test")
     pass
     #### hid Switch ####
     def on_hid_switch_active_notify(self, switch, state):
