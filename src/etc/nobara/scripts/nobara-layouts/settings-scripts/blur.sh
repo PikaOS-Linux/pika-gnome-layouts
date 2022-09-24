@@ -4,7 +4,7 @@
 
 
 if [[ $1 == enable ]]; then
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/blur-my-shell@aunetx" ]; then
+	if [[ -d "$HOME/.local/share/gnome-shell/extensions/blur-my-shell@aunetx" ]]; then
 		echo "blur my shell already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable blur-my-shell@aunetx

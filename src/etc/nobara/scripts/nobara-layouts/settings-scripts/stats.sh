@@ -3,7 +3,7 @@
 # Get needed extensions into userland
 
 if [[ $1 == enable ]]; then
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/Vitals@CoreCoding.com" ]; then
+	if [[ -d "$HOME/.local/share/gnome-shell/extensions/Vitals@CoreCoding.com" ]]; then
 		echo "Vitals already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable Vitals@CoreCoding.com

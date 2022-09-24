@@ -3,7 +3,7 @@
 # Get needed extensions into userland
 
 if [[ $1 == enable ]]; then
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/volume-mixer@evermiss.net" ]; then
+	if [[ -d "$HOME/.local/share/gnome-shell/extensions/volume-mixer@evermiss.net" ]]; then
 		echo "mixer already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable volume-mixer@evermiss.net
@@ -15,7 +15,7 @@ if [[ $1 == enable ]]; then
 		export RELOG_NEEDED=1
 	fi
 	
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/sound-output-device-chooser@kgshank.net" ]; then
+		if [[ -d "$HOME/.local/share/gnome-shell/extensions/sound-output-device-chooser@kgshank.net" ]]; then
 		echo "sound already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable sound-output-device-chooser@kgshank.net

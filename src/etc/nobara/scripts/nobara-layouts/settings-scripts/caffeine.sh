@@ -3,7 +3,7 @@
 # Get needed extensions into userland
 
 if [[ $1 == enable ]]; then
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/espresso@coadmunkee.github.com" ]; then
+	if [[ -d "$HOME/.local/share/gnome-shell/extensions/espresso@coadmunkee.github.com" ]]; then
 		echo "espresso already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable espresso@coadmunkee.github.com

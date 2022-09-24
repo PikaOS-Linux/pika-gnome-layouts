@@ -3,7 +3,7 @@
 # Get needed extensions into userland
 
 if [[ $1 == enable ]]; then
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/supergfxctl-gex@asus-linux.org" ]; then
+	if [[ -d "$HOME/.local/share/gnome-shell/extensions/supergfxctl-gex@asus-linux.org" ]]; then
 		echo "supergfxctl already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable supergfxctl-gex@asus-linux.org

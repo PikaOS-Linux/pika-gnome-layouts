@@ -3,7 +3,7 @@
 # Get needed extensions into userland
 
 if [[ $1 == enable ]]; then
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/x11gestures@joseexposito.github.io" ]; then
+	if [[ -d "$HOME/.local/share/gnome-shell/extensions/x11gestures@joseexposito.github.io" ]]; then
 		echo "x11 gestures already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable x11gestures@joseexposito.github.io

@@ -4,7 +4,7 @@
 
 
 if [[ $1 == enable ]]; then
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/trayIconsReloaded@selfmade.pl" ]; then
+	if [[ -d "$HOME/.local/share/gnome-shell/extensions/trayIconsReloaded@selfmade.pl" ]]; then
 		echo "tray icons already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable trayIconsReloaded@selfmade.pl
