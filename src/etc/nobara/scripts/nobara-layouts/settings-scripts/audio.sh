@@ -2,7 +2,6 @@
 
 # Get needed extensions into userland
 
-# Dash to panel
 if [[ $1 == enable ]]; then
 	if [ -d "$HOME/.local/share/gnome-shell/extensions/volume-mixer@evermiss.net" ]; then
 		echo "mixer already in userland no need to download anything"
