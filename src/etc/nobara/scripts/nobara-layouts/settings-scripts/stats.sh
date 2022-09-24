@@ -3,10 +3,10 @@
 # Get needed extensions into userland
 
 if [[ $1 == enable ]]; then
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/supergfxctl-gex@asus-linux.org" ]; then
-		echo "supergfxctl already in userland no need to download anything"
+	if [ -d "$HOME/.local/share/gnome-shell/extensions/Vitals@CoreCoding.com" ]; then
+		echo "Vitals already in userland no need to download anything"
 		echo "Enabling Now"
-	   	gnome-extensions enable supergfxctl-gex@asus-linux.org
+	   	gnome-extensions enable Vitals@CoreCoding.com
 	else
 		mkdir -p "$HOME/.cache/nobara-layouts/extensions/"
 		cd "$HOME/.cache/nobara-layouts/extensions/"
@@ -23,5 +23,5 @@ if [[ $1 == enable ]]; then
 	fi
 else
 echo "Disabling Now"
-gnome-extensions disable supergfxctl-gex@asus-linux.org
+gnome-extensions disable Vitals@CoreCoding.com
 fi
