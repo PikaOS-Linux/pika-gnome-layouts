@@ -1,3 +1,0 @@
-for ext in $(/usr/bin/ls ~/.local/share/gnome-shell/extensions); do
-    gnome-shell-extension-tool -d $ext;
-done
