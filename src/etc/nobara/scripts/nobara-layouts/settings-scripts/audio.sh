@@ -27,7 +27,7 @@ if [[ $1 == enable ]]; then
 		export RELOG_NEEDED=1
 		
 		if [[ $ALL != True ]]; then
-		/etc/nobara/scripts/nobara-layouts/settings-scripts/reload.sh
+		/etc/nobara/scripts/nobara-layouts/reload.sh
 		fi
 	fi
 else
