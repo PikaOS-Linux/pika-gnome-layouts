@@ -58,10 +58,10 @@ class Application:
         if (desktop_output.returncode) == 0:
             desktop_switch.set_active(True)
         
-    def on_desktop_switch_active_notify(self, switch, state):
-        if switch.get_active() == True :
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/desktop.sh"], shell=True)
-    
+        def on_desktop_switch_active_notify(self, switch, state):
+            if switch.get_active() == True :
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/desktop.sh"], shell=True)
+            return 0
     #### Audio Switch ####
         
         audio_switch = self.builder.get_object("audio_switch")
@@ -71,10 +71,10 @@ class Application:
         if (audio_output.returncode) == 0:
             audio_switch.set_active(True)
         
-    def on_audio_switch_active_notify(self, switch, state):
-        if switch.get_active() == True :
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/audio.sh"], shell=True)
-
+        def on_audio_switch_active_notify(self, switch, state):
+            if switch.get_active() == True :
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/audio.sh"], shell=True)
+            return 0
     #### Blur Switch ####
         
         blur_switch = self.builder.get_object("blur_switch")
@@ -84,10 +84,10 @@ class Application:
         if (blur_output.returncode) == 0:
             blur_switch.set_active(True)
         
-    def on_blur_switch_active_notify(self, switch, state):
-        if switch.get_active() == True :
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/blur.sh"], shell=True)
-
+        def on_blur_switch_active_notify(self, switch, state):
+            if switch.get_active() == True :
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/blur.sh"], shell=True)
+            return 0
     #### Tray Switch ####
         
         tray_switch = self.builder.get_object("tray_switch")
@@ -97,10 +97,10 @@ class Application:
         if (tray_output.returncode) == 0:
             tray_switch.set_active(True)
         
-    def on_tray_switch_active_notify(self, switch, state):
-        if switch.get_active() == True :
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/tray.sh"], shell=True)
-
+        def on_tray_switch_active_notify(self, switch, state):
+            if switch.get_active() == True :
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/tray.sh"], shell=True)
+            return 0
     #### workspace Switch ####
         
         workspace_switch = self.builder.get_object("workspace_switch")
@@ -110,11 +110,36 @@ class Application:
         if (workspace_output.returncode) == 0:
             workspace_switch.set_active(True)
         
-    def on_workspace_switch_active_notify(self, switch, state):
-        if switch.get_active() == True :
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/workspace.sh"], shell=True)
-            
-            
+        def on_workspace_switch_active_notify(self, switch, state):
+            if switch.get_active() == True :
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/workspace.sh"], shell=True)
+            return 0
+    #### x11 Switch ####
+        
+        x11_switch = self.builder.get_object("x11_switch")
+        
+        x11_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep x11gestures@joseexposito.github.io"], shell=True)
+    
+        if (x11_output.returncode) == 0:
+            x11_switch.set_active(True)
+
+        def on_x11_switch_active_notify(self, switch, state):
+            if switch.get_active() == True :
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/x11.sh"], shell=True)
+            return 0
+    #### clipboard Switch ####
+        
+        clipboard_switch = self.builder.get_object("clipboard_switch")
+        
+        clipboard_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep gnome-clipboard@b00f.github.io"], shell=True)
+    
+        if (clipboard_output.returncode) == 0:
+            clipboard_switch.set_active(True)
+        
+        def on_clipboard_switch_active_notify(self, switch, state):
+            if switch.get_active() == True :
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/clipboard.sh"], shell=True)
+            return 0
 
 Application()
 Gtk.main()
