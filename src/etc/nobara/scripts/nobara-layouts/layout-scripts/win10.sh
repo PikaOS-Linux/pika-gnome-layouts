@@ -68,7 +68,7 @@ gsettings set org.gnome.shell.extensions.dash-to-panel panel-element-positions '
 
 # Enable taskbar
 gnome-extensions enable dash-to-panel@jderose9.github.com
-# Enable appmenu
+# Enable arcmenu
 gnome-extensions enable arcmenu@arcmenu.com
 # Enable just perfection
 gnome-extensions enable just-perfection-desktop@just-perfection
