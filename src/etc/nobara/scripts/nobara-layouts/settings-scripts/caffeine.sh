@@ -13,7 +13,10 @@ if [[ $1 == enable ]]; then
 		ls espressocoadmunkee.github.com.v7.shell-extension.zip || wget  https://extensions.gnome.org/extension-data/espressocoadmunkee.github.com.v7.shell-extension.zip
 		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/espressocoadmunkee.github.com.v7.shell-extension.zip"	
 		export RELOG_NEEDED=1
+		
+		if [[$ALL != True]]; then
 		/etc/nobara/scripts/nobara-layouts/settings-scripts/reload.sh
+		fi
 	fi
 else
 echo "Disabling Now"
