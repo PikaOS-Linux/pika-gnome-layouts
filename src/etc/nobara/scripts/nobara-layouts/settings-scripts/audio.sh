@@ -15,7 +15,7 @@ if [[ $1 == enable ]]; then
 		export RELOG_NEEDED=1
 	fi
 	
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/sound-output-device-chooser@kgshank.net"[[ $ALL != True ]]; then
+	if [ -d "$HOME/.local/share/gnome-shell/extensions/sound-output-device-chooser@kgshank.net" ]; then
 		echo "sound already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable sound-output-device-chooser@kgshank.net
