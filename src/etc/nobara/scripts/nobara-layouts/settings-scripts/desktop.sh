@@ -13,15 +13,8 @@ if [[ $1 == enable ]]; then
 		ls dingrastersoft.com.v43.shell-extension.zip || wget  https://extensions.gnome.org/extension-data/dingrastersoft.com.v43.shell-extension.zip
 		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/dingrastersoft.com.v43.shell-extension.zip"	
 		export RELOG_NEEDED=1
+		/etc/nobara/scripts/nobara-layouts/settings-scripts/reload.sh
 	fi
-	
-	if [[ "$RELOG_NEEDED" == 1 ]]; then
-		if zenity --question --text="New extensions have been installed!, reload required!"
-		then
-		gnome-session-quit --force --no-prompt
-		fi
-	fi
-else
 echo "Disabling Now"
 gnome-extensions disable ding@rastersoft.com
 fi

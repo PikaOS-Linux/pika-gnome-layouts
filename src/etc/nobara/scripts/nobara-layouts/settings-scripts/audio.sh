@@ -25,13 +25,7 @@ if [[ $1 == enable ]]; then
 		ls sound-output-device-chooserkgshank.net.v41.shell-extension.zip || wget https://extensions.gnome.org/extension-data/sound-output-device-chooserkgshank.net.v41.shell-extension.zip
 		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/sound-output-device-chooserkgshank.net.v41.shell-extension.zip"	
 		export RELOG_NEEDED=1
-	fi
-	
-	if [[ "$RELOG_NEEDED" == 1 ]]; then
-		if zenity --question --text="New extensions have been installed!, reload required!"
-		then
-		gnome-session-quit --force --no-prompt
-		fi
+		/etc/nobara/scripts/nobara-layouts/settings-scripts/reload.sh
 	fi
 else
 echo "Disabling Now"
