@@ -43,26 +43,6 @@ class Application:
         if settings.get_int("layout-num") == 4:
             macostoggle = self.builder.get_object("macos_button")
             macostoggle.set_active(True)
-    ### Layouts ###
-    
-        def on_win10_button_pressed(self, widget):
-            settings = Gio.Settings.new("org.nobara.layouts")
-            settings.set_int("layout-num", 1)
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/layout-scripts/win10.sh"], shell=True)
-        def on_win11_button_pressed(self, widget):
-            settings = Gio.Settings.new("org.nobara.layouts")
-            settings.set_int("layout-num", 2)
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/layout-scripts/win11.sh"], shell=True)        
-        def on_gnome_button_pressed(self, widget):
-            settings = Gio.Settings.new("org.nobara.layouts")
-            settings.set_int("layout-num", 3)
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/layout-scripts/reset.sh"], shell=True)   
-        def on_macos_button_pressed(self, widget):
-            settings = Gio.Settings.new("org.nobara.layouts")
-            settings.set_int("layout-num", 4)
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/layout-scripts/macos.sh"], shell=True)   
-        
-    ### Settings ###
         
         
         desktop_switch = self.builder.get_object("desktop_switch")
@@ -142,6 +122,27 @@ class Application:
         if (hid_output.returncode) == 0:
             hid_switch.set_active(True)
 
+    ### Layouts ###
+    
+    def on_win10_button_pressed(self, widget):
+        settings = Gio.Settings.new("org.nobara.layouts")
+        settings.set_int("layout-num", 1)
+        subprocess.run(["/etc/nobara/scripts/nobara-layouts/layout-scripts/win10.sh"], shell=True)
+        
+    def on_win11_button_pressed(self, widget):
+        settings = Gio.Settings.new("org.nobara.layouts")
+        settings.set_int("layout-num", 2)
+        subprocess.run(["/etc/nobara/scripts/nobara-layouts/layout-scripts/win11.sh"], shell=True)        
+    def on_gnome_button_pressed(self, widget):
+        settings = Gio.Settings.new("org.nobara.layouts")
+        settings.set_int("layout-num", 3)
+        subprocess.run(["/etc/nobara/scripts/nobara-layouts/layout-scripts/reset.sh"], shell=True)   
+    def on_macos_button_pressed(self, widget):
+        settings = Gio.Settings.new("org.nobara.layouts")
+        settings.set_int("layout-num", 4)
+        subprocess.run(["/etc/nobara/scripts/nobara-layouts/layout-scripts/macos.sh"], shell=True)   
+
+    ### Settings ###
 
     #### Desktop Switch ####
     def on_desktop_switch_active_notify(self, switch, state):
