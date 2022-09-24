@@ -5,9 +5,10 @@
 
 gnome-extensions reset dash-to-panel@jderose9.github.com
 gnome-extensions reset arcmenu@arcmenu.com
+gnome-extensions reset just-perfection-desktop@just-perfection
 
 dconf reset -f /org/gnome/shell/extensions/dash-to-panel/
-
+dconf reset -f /org/gnome/shell/extensions/just-perfection/
 dconf reset -f /org/gnome/shell/extensions/arcmenu/
 
 # Get needed extensions into userland
@@ -36,6 +37,21 @@ else
 	export RELOG_NEEDED=1
 fi
 
+# Just Perfection
+
+if [ -d "$HOME/.local/share/gnome-shell/extensions/just-perfection-desktop@just-perfection" ]; then
+	echo "just perfection already in userland no need to download anything"
+else
+	mkdir -p "$HOME/.cache/nobara-layouts/extensions/"
+	cd "$HOME/.cache/nobara-layouts/extensions/"
+	ls just-perfection-desktopjust-perfection.v22.shell-extension.zip || wget https://extensions.gnome.org/extension-data/just-perfection-desktopjust-perfection.v22.shell-extension.zip
+	gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/just-perfection-desktopjust-perfection.v22.shell-extension.zip"	
+	export RELOG_NEEDED=1
+fi
+
+
+
+
 if [[ "$RELOG_NEEDED" == 1 ]]; then
 	if zenity --question --text="New extensions have been installed!, reload required!"
 	then
@@ -54,4 +70,5 @@ gsettings set org.gnome.shell.extensions.dash-to-panel panel-element-positions '
 gnome-extensions enable dash-to-panel@jderose9.github.com
 # Enable appmenu
 gnome-extensions enable arcmenu@arcmenu.com
-
+# Enable just perfection
+gnome-extensions enable just-perfection-desktop@just-perfection
