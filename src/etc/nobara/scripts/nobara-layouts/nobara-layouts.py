@@ -141,5 +141,97 @@ class Application:
                 subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/clipboard.sh"], shell=True)
             return 0
 
+    #### caffeine Switch ####
+
+        caffeine_switch = self.builder.get_object("caffeine_switch")
+
+        caffeine_output = subprocess.run(
+            ["gsettings get org.gnome.shell enabled-extensions | grep espresso@coadmunkee.github.com"], shell=True)
+
+        if (caffeine_output.returncode) == 0:
+            caffeine_switch.set_active(True)
+
+        def on_caffeine_switch_active_notify(self, switch, state):
+            if switch.get_active() == True:
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/caffeine.sh"], shell=True)
+            return 0
+
+
+    #### supergfxctl Switch ####
+
+        supergfxctl_switch = self.builder.get_object("supergfxctl_switch")
+
+        supergfxctl_output = subprocess.run(
+            ["gsettings get org.gnome.shell enabled-extensions | grep supergfxctl-gex@asus-linux.org"], shell=True)
+
+        if (supergfxctl_output.returncode) == 0:
+            supergfxctl_switch.set_active(True)
+
+        def on_supergfxctl_switch_active_notify(self, switch, state):
+            if switch.get_active() == True:
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/supergfxctl.sh"], shell=True)
+            return 0
+
+    #### kde Switch ####
+
+        kde_switch = self.builder.get_object("kde_switch")
+
+        kde_output = subprocess.run(
+            ["gsettings get org.gnome.shell enabled-extensions | grep gsconnect@andyholmes.github.io"], shell=True)
+
+        if (kde_output.returncode) == 0:
+            kde_switch.set_active(True)
+
+        def on_kde_switch_active_notify(self, switch, state):
+            if switch.get_active() == True:
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/kde.sh"], shell=True)
+            return 0
+
+    #### weather Switch ####
+
+        weather_switch = self.builder.get_object("weather_switch")
+
+        weather_output = subprocess.run(
+            ["gsettings get org.gnome.shell enabled-extensions | grep openweather-extension@jenslody.de"], shell=True)
+
+        if (weather_output.returncode) == 0:
+            weather_switch.set_active(True)
+
+        def on_weather_switch_active_notify(self, switch, state):
+            if switch.get_active() == True:
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/weather.sh"], shell=True)
+            return 0
+
+    #### spacebar Switch ####
+
+        spacebar_switch = self.builder.get_object("spacebar_switch")
+
+        spacebar_output = subprocess.run(
+            ["gsettings get org.gnome.shell enabled-extensions | grep space-bar@luchrioh"], shell=True)
+
+        if (spacebar_output.returncode) == 0:
+            spacebar_switch.set_active(True)
+
+        def on_spacebar_switch_active_notify(self, switch, state):
+            if switch.get_active() == True:
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/spacebar.sh"], shell=True)
+            return 0
+
+
+    #### stats Switch ####
+
+        stats_switch = self.builder.get_object("stats_switch")
+
+        stats_output = subprocess.run(
+            ["gsettings get org.gnome.shell enabled-extensions | grep space-bar@luchrioh"], shell=True)
+
+        if (stats_output.returncode) == 0:
+            stats_switch.set_active(True)
+
+        def on_stats_switch_active_notify(self, switch, state):
+            if switch.get_active() == True:
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/stats.sh"], shell=True)
+            return 0
+
 Application()
 Gtk.main()
