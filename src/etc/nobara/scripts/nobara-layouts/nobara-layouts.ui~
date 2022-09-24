@@ -271,7 +271,6 @@
                 <property name="can-focus">True</property>
                 <property name="hscrollbar-policy">never</property>
                 <property name="shadow-type">in</property>
-                <signal name="show" handler="on_settings_scroll_show" swapped="no"/>
                 <child>
                   <object class="GtkViewport">
                     <property name="visible">True</property>
@@ -281,6 +280,10 @@
                       <object class="GtkGrid" id="desktop_grid">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
+                        <property name="margin-start">10</property>
+                        <property name="margin-end">10</property>
+                        <property name="margin-top">10</property>
+                        <property name="margin-bottom">10</property>
                         <property name="row-spacing">10</property>
                         <property name="column-spacing">10</property>
                         <property name="column-homogeneous">True</property>
