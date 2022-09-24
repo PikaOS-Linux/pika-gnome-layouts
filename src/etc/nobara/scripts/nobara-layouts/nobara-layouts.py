@@ -223,7 +223,7 @@ class Application:
         stats_switch = self.builder.get_object("stats_switch")
 
         stats_output = subprocess.run(
-            ["gsettings get org.gnome.shell enabled-extensions | grep space-bar@luchrioh"], shell=True)
+            ["gsettings get org.gnome.shell enabled-extensions | grep Vitals@CoreCoding.com"], shell=True)
 
         if (stats_output.returncode) == 0:
             stats_switch.set_active(True)
@@ -231,6 +231,21 @@ class Application:
         def on_stats_switch_active_notify(self, switch, state):
             if switch.get_active() == True:
                 subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/stats.sh"], shell=True)
+            return 0
+
+    #### hid Switch ####
+
+        hid_switch = self.builder.get_object("hid_switch")
+
+        hid_output = subprocess.run(
+            ["gsettings get org.gnome.shell enabled-extensions | grep wireless-hid@chlumskyvaclav.gmail.com"], shell=True)
+
+        if (hid_output.returncode) == 0:
+            hid_switch.set_active(True)
+
+        def on_hid_switch_active_notify(self, switch, state):
+            if switch.get_active() == True:
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/hid.sh"], shell=True)
             return 0
 
 Application()
