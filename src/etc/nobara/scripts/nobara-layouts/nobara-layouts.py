@@ -36,10 +36,9 @@ class Application:
         
     ### Layouts ###
     
-        def test1(self, widget):
-            print("test1")
+        def on_win10_button_pressed(self, widget):
             settings = Gio.Settings.new("org.nobara.layouts")
-            settings.set_int("layout-num", 3)
+            settings.set_int("layout-num", 1)
         def test2(self, widget):
             print("test2")
         def test3(self, widget):
@@ -191,8 +190,7 @@ class Application:
 
         weather_switch = self.builder.get_object("weather_switch")
 
-        weather_output = subprocess.run(
-            ["gsettings get org.gnome.shell enabled-extensions | grep openweather-extension@jenslody.de"], shell=True)
+        weather_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep openweather-extension@jenslody.de"], shell=True)
 
         if (weather_output.returncode) == 0:
             weather_switch.set_active(True)
@@ -206,8 +204,7 @@ class Application:
 
         spacebar_switch = self.builder.get_object("spacebar_switch")
 
-        spacebar_output = subprocess.run(
-            ["gsettings get org.gnome.shell enabled-extensions | grep space-bar@luchrioh"], shell=True)
+        spacebar_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep space-bar@luchrioh"], shell=True)
 
         if (spacebar_output.returncode) == 0:
             spacebar_switch.set_active(True)
@@ -222,8 +219,7 @@ class Application:
 
         stats_switch = self.builder.get_object("stats_switch")
 
-        stats_output = subprocess.run(
-            ["gsettings get org.gnome.shell enabled-extensions | grep Vitals@CoreCoding.com"], shell=True)
+        stats_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep Vitals@CoreCoding.com"], shell=True)
 
         if (stats_output.returncode) == 0:
             stats_switch.set_active(True)
@@ -237,8 +233,7 @@ class Application:
 
         hid_switch = self.builder.get_object("hid_switch")
 
-        hid_output = subprocess.run(
-            ["gsettings get org.gnome.shell enabled-extensions | grep wireless-hid@chlumskyvaclav.gmail.com"], shell=True)
+        hid_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep wireless-hid@chlumskyvaclav.gmail.com"], shell=True)
 
         if (hid_output.returncode) == 0:
             hid_switch.set_active(True)
