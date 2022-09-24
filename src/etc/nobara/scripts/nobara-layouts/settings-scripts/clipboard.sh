@@ -2,8 +2,8 @@
 
 # Get needed extensions into userland
 
-if [[ $1 == enable ]]; then
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/gnome-clipboard@b00f.github.io" ]; then
+if [[ $1 == enable[[ $ALL != True ]]]; then
+	if [ -d "$HOME/.local/share/gnome-shell/extensions/gnome-clipboard@b00f.github.io"[[ $ALL != True ]]; then
 		echo "clipboard already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable gnome-clipboard@b00f.github.io
@@ -14,7 +14,7 @@ if [[ $1 == enable ]]; then
 		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/gnome-clipboardb00f.github.io.v11.shell-extension.zip"	
 		export RELOG_NEEDED=1
 		
-		if [[$ALL != True]]; then
+		if [[ $ALL != True ]]; then
 		/etc/nobara/scripts/nobara-layouts/settings-scripts/reload.sh
 		fi
 	fi

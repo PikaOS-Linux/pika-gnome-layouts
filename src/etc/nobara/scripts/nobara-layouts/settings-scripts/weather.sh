@@ -2,8 +2,8 @@
 
 # Get needed extensions into userland
 
-if [[ $1 == enable ]]; then
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/openweather-extension@jenslody.de" ]; then
+if [[ $1 == enable[[ $ALL != True ]]]; then
+	if [ -d "$HOME/.local/share/gnome-shell/extensions/openweather-extension@jenslody.de"[[ $ALL != True ]]; then
 		echo "weather already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable openweather-extension@jenslody.de
@@ -14,7 +14,7 @@ if [[ $1 == enable ]]; then
 		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/openweather-extensionjenslody.de.v119.shell-extension.zip"	
 		export RELOG_NEEDED=1
 		
-		if [[$ALL != True]]; then
+		if [[ $ALL != True ]]; then
 		/etc/nobara/scripts/nobara-layouts/settings-scripts/reload.sh
 		fi
 	fi

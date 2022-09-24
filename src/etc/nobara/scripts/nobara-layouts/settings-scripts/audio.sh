@@ -2,8 +2,8 @@
 
 # Get needed extensions into userland
 
-if [[ $1 == enable ]]; then
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/volume-mixer@evermiss.net" ]; then
+if [[ $1 == enable[[ $ALL != True ]]]; then
+	if [ -d "$HOME/.local/share/gnome-shell/extensions/volume-mixer@evermiss.net"[[ $ALL != True ]]; then
 		echo "mixer already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable volume-mixer@evermiss.net
@@ -15,7 +15,7 @@ if [[ $1 == enable ]]; then
 		export RELOG_NEEDED=1
 	fi
 	
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/sound-output-device-chooser@kgshank.net" ]; then
+	if [ -d "$HOME/.local/share/gnome-shell/extensions/sound-output-device-chooser@kgshank.net"[[ $ALL != True ]]; then
 		echo "sound already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable sound-output-device-chooser@kgshank.net
@@ -26,7 +26,7 @@ if [[ $1 == enable ]]; then
 		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/sound-output-device-chooserkgshank.net.v41.shell-extension.zip"	
 		export RELOG_NEEDED=1
 		
-		if [[$ALL != True]]; then
+		if [[ $ALL != True ]]; then
 		/etc/nobara/scripts/nobara-layouts/settings-scripts/reload.sh
 		fi
 	fi

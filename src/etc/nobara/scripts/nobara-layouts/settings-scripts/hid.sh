@@ -2,8 +2,8 @@
 
 # Get needed extensions into userland
 
-if [[ $1 == enable ]]; then
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/wireless-hid@chlumskyvaclav.gmail.com" ]; then
+if [[ $1 == enable[[ $ALL != True ]]]; then
+	if [ -d "$HOME/.local/share/gnome-shell/extensions/wireless-hid@chlumskyvaclav.gmail.com"[[ $ALL != True ]]; then
 		echo "Wireless HID already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable wireless-hid@chlumskyvaclav.gmail.com
@@ -14,7 +14,7 @@ if [[ $1 == enable ]]; then
 		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/wireless-hidchlumskyvaclav.gmail.com.v7.shell-extension.zip"	
 		export RELOG_NEEDED=1
 		
-		if [[$ALL != True]]; then
+		if [[ $ALL != True ]]; then
 		/etc/nobara/scripts/nobara-layouts/settings-scripts/reload.sh
 		fi
 	fi

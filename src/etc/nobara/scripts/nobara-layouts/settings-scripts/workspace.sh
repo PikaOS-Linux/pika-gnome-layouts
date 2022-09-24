@@ -2,8 +2,8 @@
 
 # Get needed extensions into userland
 
-if [[ $1 == enable ]]; then
-	if [ -d "$HOME/.local/share/gnome-shell/extensions/auto-move-windows@gnome-shell-extensions.gcampax.github.com" ]; then
+if [[ $1 == enable[[ $ALL != True ]]]; then
+	if [ -d "$HOME/.local/share/gnome-shell/extensions/auto-move-windows@gnome-shell-extensions.gcampax.github.com"[[ $ALL != True ]]; then
 		echo "workspace already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable auto-move-windows@gnome-shell-extensions.gcampax.github.com
@@ -14,7 +14,7 @@ if [[ $1 == enable ]]; then
 		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/auto-move-windowsgnome-shell-extensions.gcampax.github.com.v50.shell-extension.zip"	
 		export RELOG_NEEDED=1
 		
-		if [[$ALL != True]]; then
+		if [[ $ALL != True ]]; then
 		/etc/nobara/scripts/nobara-layouts/settings-scripts/reload.sh
 		fi
 	fi
