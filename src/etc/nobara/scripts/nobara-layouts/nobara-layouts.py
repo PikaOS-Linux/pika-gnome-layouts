@@ -130,72 +130,100 @@ class Application:
     #### Desktop Switch ####
     def on_desktop_switch_active_notify(self, switch, state):
         if switch.get_active() == True :
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/desktop.sh"], shell=True)
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/desktop.sh enable"], shell=True)
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/desktop.sh disable"], shell=True)
     pass
     #### Audio Switch ####
     def on_audio_switch_active_notify(self, switch, state):
         if switch.get_active() == True :
-                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/audio.sh"], shell=True)
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/audio.sh enable"], shell=True)
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/audio.sh disable"], shell=True)
     pass
     #### Blur Switch ####  
     def on_blur_switch_active_notify(self, switch, state):
         if switch.get_active() == True :
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/blur.sh"], shell=True)
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/blur.sh enable"], shell=True)
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/blur.sh disable"], shell=True)
     pass
     #### Tray Switch ####  
     def on_tray_switch_active_notify(self, switch, state):
         if switch.get_active() == True :
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/tray.sh"], shell=True)
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/tray.sh enable"], shell=True)
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/tray.sh disable"], shell=True)
     pass
     #### workspace Switch ####
     def on_workspace_switch_active_notify(self, switch, state):
         if switch.get_active() == True :
-                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/workspace.sh"], shell=True)
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/workspace.sh enable"], shell=True)
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/workspace.sh disable"], shell=True)
     pass
     #### x11 Switch ####
     def on_x11_switch_active_notify(self, switch, state):
         if switch.get_active() == True :
-                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/x11.sh"], shell=True)
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/x11.sh enable"], shell=True)
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/x11.sh disable"], shell=True)
     pass
     #### clipboard Switch ####
     def on_clipboard_switch_active_notify(self, switch, state):
         if switch.get_active() == True :
-                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/clipboard.sh"], shell=True)
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/clipboard.sh enable"], shell=True)
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/clipboard.sh disable"], shell=True)
     pass
     #### caffeine Switch ####
     def on_caffeine_switch_active_notify(self, switch, state):
         if switch.get_active() == True:
-                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/caffeine.sh"], shell=True)
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/caffeine.sh enable"], shell=True)
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/caffeine.sh disable"], shell=True)
     pass
     #### supergfxctl Switch ####
     def on_supergfxctl_switch_active_notify(self, switch, state):
         if switch.get_active() == True:
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/supergfxctl.sh"], shell=True)
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/supergfxctl.sh enable"], shell=True)
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/supergfxctl.sh disable"], shell=True)
     pass
     #### kde Switch ####
     def on_kde_switch_active_notify(self, switch, state):
         if switch.get_active() == True:
-                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/kde.sh"], shell=True)
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/kde.sh enable"], shell=True)
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/kde.sh disable"], shell=True)
     pass
     #### weather Switch ####
     def on_weather_switch_active_notify(self, switch, state):
         if switch.get_active() == True:
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/weather.sh"], shell=True)
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/weather.sh enable"], shell=True)
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/weather.sh disable"], shell=True)
     pass
     #### spacebar Switch ####
     def on_spacebar_switch_active_notify(self, switch, state):
         if switch.get_active() == True:
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/spacebar.sh"], shell=True)
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/spacebar.sh enable"], shell=True)
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/spacebar.sh disable"], shell=True)
     pass
     #### stats Switch ####
     def on_stats_switch_active_notify(self, switch, state):
         if switch.get_active() == True:
-                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/stats.sh"], shell=True)
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/stats.sh enable"], shell=True)
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/stats.sh disable"], shell=True)
     pass
     #### hid Switch ####
     def on_hid_switch_active_notify(self, switch, state):
         if switch.get_active() == True:
-                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/hid.sh"], shell=True)
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/hid.sh enable"], shell=True)
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/hid.sh disable"], shell=True)
     pass
 
 Application()
