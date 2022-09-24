@@ -10,8 +10,8 @@ if [[ $1 == enable ]]; then
 	else
 		mkdir -p "$HOME/.cache/nobara-layouts/extensions/"
 		cd "$HOME/.cache/nobara-layouts/extensions/"
-		ls openweather-extensionjenslody.de.v119.shell-extension.zip || wget  https://extensions.gnome.org/extension-data/openweather-extensionjenslody.de.v119.shell-extension.zip
-		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/openweather-extensionjenslody.de.v119.shell-extension.zip"	
+		ls openweather-extensionjenslody.de.v107.shell-extension.zip || wget  https://extensions.gnome.org/extension-data/openweather-extensionjenslody.de.v107.shell-extension.zip
+		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/openweather-extensionjenslody.de.v107.shell-extension.zip"	
 		export RELOG_NEEDED=1
 		
 		if [[ $ALL != True ]]; then

@@ -10,8 +10,8 @@ if [[ $1 == enable ]]; then
 	else
 		mkdir -p "$HOME/.cache/nobara-layouts/extensions/"
 		cd "$HOME/.cache/nobara-layouts/extensions/"
-		ls auto-move-windowsgnome-shell-extensions.gcampax.github.com.v50.shell-extension.zip || wget  https://extensions.gnome.org/extension-data/auto-move-windowsgnome-shell-extensions.gcampax.github.com.v50.shell-extension.zip
-		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/auto-move-windowsgnome-shell-extensions.gcampax.github.com.v50.shell-extension.zip"	
+		ls auto-move-windowsgnome-shell-extensions.gcampax.github.com.v49.shell-extension.zip || wget  https://extensions.gnome.org/extension-data/auto-move-windowsgnome-shell-extensions.gcampax.github.com.v49.shell-extension.zip
+		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/auto-move-windowsgnome-shell-extensions.gcampax.github.com.v49.shell-extension.zip"	
 		export RELOG_NEEDED=1
 		
 		if [[ $ALL != True ]]; then

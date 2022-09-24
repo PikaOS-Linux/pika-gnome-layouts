@@ -10,8 +10,8 @@ if [[ $1 == enable ]]; then
 	else
 		mkdir -p "$HOME/.cache/nobara-layouts/extensions/"
 		cd "$HOME/.cache/nobara-layouts/extensions/"
-		ls supergfxctl-gexasus-linux.org.v15.shell-extension.zip || wget  https://extensions.gnome.org/extension-data/supergfxctl-gexasus-linux.org.v15.shell-extension.zip
-		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/supergfxctl-gexasus-linux.org.v15.shell-extension.zip"	
+		ls supergfxctl-gexasus-linux.org.v14.shell-extension.zip || wget  https://extensions.gnome.org/extension-data/supergfxctl-gexasus-linux.org.v14.shell-extension.zip
+		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/supergfxctl-gexasus-linux.org.v14.shell-extension.zip"	
 		export RELOG_NEEDED=1
 		
 		if [[ $ALL != True ]]; then
