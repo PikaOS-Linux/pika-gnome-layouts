@@ -20,6 +20,7 @@ Requires:	gtk3
 Requires: gnome-shell
 Requires: dconf
 Requires: glib2
+Requires: zenity
 
 %install
 tar -xf %{SOURCE0}
