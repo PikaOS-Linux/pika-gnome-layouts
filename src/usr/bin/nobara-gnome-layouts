@@ -1,0 +1,2 @@
+#! /bin/bash
+python3 /etc/nobara/scripts/nobara-layouts/nobara-layouts.py
