@@ -242,6 +242,10 @@ class Application:
         else:
             subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/hid.sh disable"], shell=True)
     pass
-
+    
+    def on_install_all_pressed(self, widget):
+        subprocess.run(["/etc/nobara/scripts/nobara-layouts/all.sh"], shell=True)
+    pass
+    
 Application()
 Gtk.main()
