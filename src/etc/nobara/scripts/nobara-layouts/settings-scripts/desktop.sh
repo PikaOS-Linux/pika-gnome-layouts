@@ -18,6 +18,7 @@ if [[ $1 == enable ]]; then
 		/etc/nobara/scripts/nobara-layouts/reload.sh
 		fi
 	fi
+else
 echo "Disabling Now"
 gnome-extensions disable ding@rastersoft.com
 fi
