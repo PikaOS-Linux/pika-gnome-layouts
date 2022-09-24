@@ -26,25 +26,41 @@ class Application:
         
         settings = Gio.Settings.new("org.nobara.layouts")
         
-        print(settings.get_int("layout-num"))
         
         
-        win10toggle = self.builder.get_object("win10_button")
+        if settings.get_int("layout-num") == 1:
+            win10toggle = self.builder.get_object("win10_button")
+            win10toggle.set_active(True)
         
-        win10toggle.set_active(True)
-        win10toggle.pressed()
-        
+        if settings.get_int("layout-num") == 2:
+            win11toggle = self.builder.get_object("win11_button")
+            win11toggle.set_active(True)       
+
+        if settings.get_int("layout-num") == 3:
+            gnometoggle = self.builder.get_object("gnome_button")
+            gnometoggle.set_active(True)
+            
+        if settings.get_int("layout-num") == 4:
+            macostoggle = self.builder.get_object("macos_button")
+            macostoggle.set_active(True)
     ### Layouts ###
     
         def on_win10_button_pressed(self, widget):
             settings = Gio.Settings.new("org.nobara.layouts")
             settings.set_int("layout-num", 1)
-        def test2(self, widget):
-            print("test2")
-        def test3(self, widget):
-            print("test3")
-        def test4(self, widget):
-            print("test4")
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/layout-scripts/win10.sh"], shell=True)
+        def on_win11_button_pressed(self, widget):
+            settings = Gio.Settings.new("org.nobara.layouts")
+            settings.set_int("layout-num", 2)
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/layout-scripts/win11.sh"], shell=True)        
+        def on_gnome_button_pressed(self, widget):
+            settings = Gio.Settings.new("org.nobara.layouts")
+            settings.set_int("layout-num", 3)
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/layout-scripts/reset.sh"], shell=True)   
+        def on_macos_button_pressed(self, widget):
+            settings = Gio.Settings.new("org.nobara.layouts")
+            settings.set_int("layout-num", 4)
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/layout-scripts/macos.sh"], shell=True)   
         
     ### Settings ###
         
