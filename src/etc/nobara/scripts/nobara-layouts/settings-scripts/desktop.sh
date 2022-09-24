@@ -5,7 +5,7 @@
 # Dash to panel
 if [[ $1 == enable ]]; then
 	if [ -d "$HOME/.local/share/gnome-shell/extensions/ding@rastersoft.com" ]; then
-		echo "arcmenu already in userland no need to download anything"
+		echo "desktop already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable ding@rastersoft.com
 	else
