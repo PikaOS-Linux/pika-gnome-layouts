@@ -289,7 +289,6 @@
                                 <property name="valign">center</property>
                                 <property name="draw-indicator">True</property>
                                 <property name="group">radiobutton1</property>
-                                <signal name="pressed" handler="on_gnome2_button_pressed" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -337,7 +336,6 @@
                                 <property name="valign">center</property>
                                 <property name="draw-indicator">True</property>
                                 <property name="group">radiobutton1</property>
-                                <signal name="pressed" handler="on_unity_button_pressed" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
