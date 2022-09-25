@@ -24,6 +24,10 @@ class Application:
         win = self.builder.get_object("main_window")
         #win.connect("destroy", Gtk.main_quit)
         
+        ### Enable Extensions
+        
+        subprocess.run(["gsettings set org.gnome.shell disable-user-extensions false"], shell=True, stdout=subprocess.DEVNULL)
+        
         ### Extension refresh ###
         
         global extension_refresh
@@ -127,7 +131,7 @@ class Application:
                     hid_switch.set_active(True)
                 else:
                     hid_switch.set_active(False)
-                time.sleep(15.0)
+                time.sleep(10.0)
         t1 = threading.Thread(target=extension_refresh_func)
         t1.start()
         
