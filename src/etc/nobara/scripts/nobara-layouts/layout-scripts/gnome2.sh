@@ -6,6 +6,7 @@
 gnome-extensions reset Move_Clock@rmy.pobox.com
 gnome-extensions reset just-perfection-desktop@just-perfection
 gnome-extensions reset launch-new-instance@gnome-shell-extensions.gcampax.github.com
+gnome-extensions reset arcmenu@arcmenu.com
 gnome-extensions reset places-menu@gnome-shell-extensions.gcampax.github.com
 gnome-extensions reset window-list@gnome-shell-extensions.gcampax.github.com
 
@@ -15,6 +16,7 @@ dconf reset -f /org/gnome/shell/extensions/just-perfection/
 dconf reset -f /org/gnome/shell/extensions/launch-new-instance/
 dconf reset -f /org/gnome/shell/extensions/places-menu/
 dconf reset -f /org/gnome/shell/extensions/window-list/
+dconf reset -f /org/gnome/shell/extensions/arcmenu/
 
 # Get needed extensions into userland
 
@@ -139,3 +141,5 @@ gnome-extensions enable launch-new-instance@gnome-shell-extensions.gcampax.githu
 gnome-extensions enable places-menu@gnome-shell-extensions.gcampax.github.com
 # Enable window list
 gnome-extensions enable window-list@gnome-shell-extensions.gcampax.github.com
+# Enable arcmenu
+gnome-extensions enable arcmenu@arcmenu.com
