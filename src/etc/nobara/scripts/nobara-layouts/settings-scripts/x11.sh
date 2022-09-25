@@ -3,15 +3,15 @@
 # Get needed extensions into userland
 
 if [[ $1 == enable ]]; then
-	if [[ -d "$HOME/.local/share/gnome-shell/extensions/x11gestures@joseexposito.github.io" ]]; then
-		echo "x11 gestures already in userland no need to download anything"
+	if [[ -d "$HOME/.local/share/gnome-shell/extensions/gestureImprovements@gestures" ]]; then
+		echo "gestures already in userland no need to download anything"
 		echo "Enabling Now"
 	   	gnome-extensions enable x11gestures@joseexposito.github.io
 	else
 		mkdir -p "$HOME/.cache/nobara-layouts/extensions/"
 		cd "$HOME/.cache/nobara-layouts/extensions/"
-		ls x11gesturesjoseexposito.github.io.v14.shell-extension.zip || wget  https://extensions.gnome.org/extension-data/x11gesturesjoseexposito.github.io.v14.shell-extension.zip
-		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/x11gesturesjoseexposito.github.io.v14.shell-extension.zip"	
+		ls gestureImprovementsgestures.v22.shell-extension.zip || wget  https://extensions.gnome.org/extension-data/gestureImprovementsgestures.v22.shell-extension.zip
+		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/gestureImprovementsgestures.v22.shell-extension.zip"	
 		export RELOG_NEEDED=1
 		
 		if [[ $ALL != True ]]; then
@@ -20,5 +20,5 @@ if [[ $1 == enable ]]; then
 	fi
 else
 echo "Disabling Now"
-gnome-extensions disable x11gestures@joseexposito.github.io
+gnome-extensions disable gestureImprovements@gestures
 fi
