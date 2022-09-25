@@ -68,16 +68,9 @@ if [ -d "$HOME/.local/share/gnome-shell/extensions/window-list@gnome-shell-exten
 else
 	mkdir -p "$HOME/.cache/nobara-layouts/extensions/"
 	cd "$HOME/.cache/nobara-layouts/extensions/"
-	ls window-listgnome-shell-extensions.gcampax.github.com.v43.shell-extension.zip || wget hhttps://extensions.gnome.org/extension-data/window-listgnome-shell-extensions.gcampax.github.com.v43.shell-extension.zip
+	ls window-listgnome-shell-extensions.gcampax.github.com.v43.shell-extension.zip || wget https://extensions.gnome.org/extension-data/window-listgnome-shell-extensions.gcampax.github.com.v43.shell-extension.zip
 	gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/window-listgnome-shell-extensions.gcampax.github.com.v43.shell-extension.zip"	
 	export RELOG_NEEDED=1
-fi
-
-if [[ "$RELOG_NEEDED" == 1 ]]; then
-	if zenity --question --text="New extensions have been installed!, reload required!"
-	then
-	gnome-session-quit --force --no-prompt
-	fi
 fi
 
 # Launch new instance
@@ -110,6 +103,14 @@ else
 	gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/places-menugnome-shell-extensions.gcampax.github.com.v54.shell-extension.zip"	
 	export RELOG_NEEDED=1
 fi
+
+if [[ "$RELOG_NEEDED" == 1 ]]; then
+	if zenity --question --text="New extensions have been installed!, reload required!"
+	then
+	gnome-session-quit --force --no-prompt
+	fi
+fi
+
 
 if [[ "$RELOG_NEEDED" == 1 ]]; then
 	if zenity --question --text="New extensions have been installed!, reload required!"
