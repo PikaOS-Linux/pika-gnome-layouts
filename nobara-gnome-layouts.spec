@@ -1,7 +1,7 @@
 BuildArch:              noarch
 
 Name:          nobara-gnome-layouts
-Version:       0.5
+Version:       0.6
 Release:       1%{?dist}
 License:       GPLv2
 Group:         System Environment/Libraries
@@ -21,6 +21,7 @@ Requires: gnome-shell
 Requires: dconf
 Requires: glib2
 Requires: zenity
+Requires: gnome-x11-gesture-daemon
 
 %install
 tar -xf %{SOURCE0}
