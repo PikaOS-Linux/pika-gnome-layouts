@@ -6,6 +6,9 @@ import os
 import os.path
 from pathlib import Path
 
+import time
+import threading
+
 class Application:
     
     ### MAIN WINDOW ###
@@ -19,6 +22,27 @@ class Application:
         self.builder.add_from_file("/etc/nobara/scripts/nobara-layouts/nobara-layouts.ui")
         self.builder.connect_signals(self)
         win = self.builder.get_object("main_window")
+        #win.connect("destroy", Gtk.main_quit)
+        
+        ### Extension refresh ###
+        
+        global extension_refresh
+        extension_refresh = True
+        
+        def extension_refresh_func(): 
+            while extension_refresh == True:
+                print("test")
+                time.sleep(1.0)
+        t1 = threading.Thread(target=extension_refresh_func)
+        t1.start()
+        
+        def extension_refresh_kill(self):
+            global extension_refresh
+            extension_refresh = False
+        
+        ###
+        
+        win.connect("destroy", extension_refresh_kill)
         win.connect("destroy", Gtk.main_quit)
         
         self.window = self.builder.get_object("main_window")
