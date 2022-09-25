@@ -22,6 +22,7 @@ Requires: dconf
 Requires: glib2
 Requires: zenity
 Requires: gnome-x11-gesture-daemon
+Requires: supergfxctl
 
 %install
 tar -xf %{SOURCE0}
@@ -46,3 +47,4 @@ Nobara's Python3 & GTK3 built Gnome layouts App
 
 %post
 glib-compile-schemas /usr/share/glib-2.0/schemas/
+systemctl enable --now supergfxd
