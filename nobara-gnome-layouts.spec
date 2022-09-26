@@ -1,7 +1,7 @@
 BuildArch:              noarch
 
 Name:          nobara-gnome-layouts
-Version:       0.6
+Version:       0.9
 Release:       1%{?dist}
 License:       GPLv2
 Group:         System Environment/Libraries
