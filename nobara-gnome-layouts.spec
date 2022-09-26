@@ -31,7 +31,7 @@ Requires: gnome-shell-extension-launch-new-instance
 Requires: gnome-shell-extension-just-perfection
 Requires: gnome-shell-extension-arc-menu
 Requires: gnome-shell-extension-auto-move-windows
-Requires: gnome-shell-extension-caffine
+Requires: gnome-shell-extension-caffeine
 Requires: gnome-shell-extension-dash-to-dock
 Requires: gnome-shell-extension-dash-to-panel
 Requires: gnome-shell-extension-launch-new-instance
