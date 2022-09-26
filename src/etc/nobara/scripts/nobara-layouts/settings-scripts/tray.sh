@@ -4,22 +4,7 @@
 
 
 if [[ $1 == enable ]]; then
-	if [[ -d "$HOME/.local/share/gnome-shell/extensions/trayIconsReloaded@selfmade.pl" ]]; then
-		echo "tray icons already in userland no need to download anything"
-		echo "Enabling Now"
-	   	gnome-extensions enable trayIconsReloaded@selfmade.pl
-	else
-		mkdir -p "$HOME/.cache/nobara-layouts/extensions/"
-		cd "$HOME/.cache/nobara-layouts/extensions/"
-		ls trayIconsReloadedselfmade.pl.v23.shell-extension.zip || wget https://extensions.gnome.org/extension-data/trayIconsReloadedselfmade.pl.v23.shell-extension.zip
-		gnome-extensions install "$HOME/.cache/nobara-layouts/extensions/trayIconsReloadedselfmade.pl.v23.shell-extension.zip"	
-		export RELOG_NEEDED=1
-		
-		if [[ $ALL != True ]]; then
-		/etc/nobara/scripts/nobara-layouts/reload.sh
-		fi
-	fi
+	gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 else
-echo "Disabling Now"
-gnome-extensions disable trayIconsReloaded@selfmade.pl
+gnome-extensions disable appindicatorsupport@rgcjonas.gmail.com
 fi
