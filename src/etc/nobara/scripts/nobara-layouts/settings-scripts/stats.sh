@@ -1,7 +1,7 @@
 #! /bin/bash
 
 if [[ $1 == enable ]]; then
-	gnome-extensions enable Vitals@CoreCoding.com
+	gnome-extensions enable freon@UshakovVasilii_Github.yahoo.com
 else
-gnome-extensions disable Vitals@CoreCoding.com
+gnome-extensions disable freon@UshakovVasilii_Github.yahoo.com
 fi
