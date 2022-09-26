@@ -50,6 +50,7 @@ Requires: gnome-shell-extension-gamemode
 Requires: gnome-shell-extension-freon
 Requires: gnome-shell-extension-wireless-hid
 Requires: gnome-shell-extension-gesture-improvements
+Requires: gnome-shell-extension-spacebar
 
 %install
 tar -xf %{SOURCE0}
