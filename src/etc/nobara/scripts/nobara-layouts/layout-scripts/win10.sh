@@ -1,15 +1,15 @@
 #! /bin/bash
 
 # Reset everything
-/etc/nobara/scripts/nobara-layouts/layout-scripts/reset.sh
+/etc/nobara/scripts/nobara-layouts/layout-scripts/reset.sh ||
 
-gnome-extensions reset dash-to-panel@jderose9.github.com
-gnome-extensions reset arcmenu@arcmenu.com
-gnome-extensions reset just-perfection-desktop@just-perfection
+gnome-extensions reset dash-to-panel@jderose9.github.com ||
+gnome-extensions reset arcmenu@arcmenu.com ||
+gnome-extensions reset just-perfection-desktop@just-perfection ||
 
-dconf reset -f /org/gnome/shell/extensions/dash-to-panel/
-dconf reset -f /org/gnome/shell/extensions/just-perfection/
-dconf reset -f /org/gnome/shell/extensions/arcmenu/
+dconf reset -f /org/gnome/shell/extensions/dash-to-panel/ ||
+dconf reset -f /org/gnome/shell/extensions/just-perfection/ ||
+dconf reset -f /org/gnome/shell/extensions/arcmenu/ ||
 
 # Get needed extensions into userland
 
