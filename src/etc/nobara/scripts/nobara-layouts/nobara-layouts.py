@@ -22,6 +22,8 @@ class Application:
         self.builder.add_from_file("/etc/nobara/scripts/nobara-layouts/nobara-layouts.ui")
         self.builder.connect_signals(self)
         win = self.builder.get_object("main_window")
+        
+        self.builder.get_object("install_all").hide()
         #win.connect("destroy", Gtk.main_quit)
         
         ### Enable Extensions
