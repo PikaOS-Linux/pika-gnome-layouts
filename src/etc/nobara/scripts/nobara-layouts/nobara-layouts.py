@@ -74,7 +74,7 @@ class Application:
                     workspace_switch.set_active(False)
                 
                 x11_switch = self.builder.get_object("x11_switch")
-                x11_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep x11gestures@joseexposito.github.io"], shell=True, stdout=subprocess.DEVNULL)
+                x11_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep gestureImprovements@gestures"], shell=True, stdout=subprocess.DEVNULL)
                 if (x11_output.returncode) == 0:
                     x11_switch.set_active(True)
                 else:
