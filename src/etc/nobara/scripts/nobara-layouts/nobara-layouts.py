@@ -133,6 +133,16 @@ class Application:
                     hid_switch.set_active(True)
                 else:
                     hid_switch.set_active(False)
+                pop_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep pop-shell@system76.com"], shell=True, stdout=subprocess.DEVNULL)
+                if (pop_output.returncode) == 0:
+                    pop_switch.set_active(True)
+                else:
+                    pop_switch.set_active(False)
+                gamemode_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep gamemode@christian.kellner.me"], shell=True, stdout=subprocess.DEVNULL)
+                if (gamemode_output.returncode) == 0:
+                    gamemode_switch.set_active(True)
+                else:
+                    gamemode_switch.set_active(False)
                 time.sleep(10.0)
         t1 = threading.Thread(target=extension_refresh_func)
         t1.start()
@@ -290,7 +300,21 @@ class Application:
         else:
             subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/hid.sh disable"], shell=True)
     pass
-    
+    #### Pop Switch ####
+    def on_pop_switch_active_notify(self, switch, state):
+        if switch.get_active() == True:
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/pop.sh enable"], shell=True)
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/pop.sh disable"], shell=True)
+    pass
+    #### gamemode Switch ####
+    def on_gamemode_switch_active_notify(self, switch, state):
+        if switch.get_active() == True:
+                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/gamemode.sh enable"], shell=True)
+        else:
+            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/gamemode.sh disable"], shell=True)
+    pass
+
     def on_install_all_pressed(self, widget):
         subprocess.run(["/etc/nobara/scripts/nobara-layouts/all.sh"], shell=True)
     pass
