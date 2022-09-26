@@ -1,22 +1,22 @@
 #! /bin/bash
 
 # Reset everything
-/etc/nobara/scripts/nobara-layouts/layout-scripts/reset.sh ||
+/etc/nobara/scripts/nobara-layouts/layout-scripts/reset.sh || echo
 
-gnome-extensions reset Move_Clock@rmy.pobox.com ||
-gnome-extensions reset just-perfection-desktop@just-perfection ||
-gnome-extensions reset launch-new-instance@gnome-shell-extensions.gcampax.github.com ||
-gnome-extensions reset arcmenu@arcmenu.com ||
-gnome-extensions reset places-menu@gnome-shell-extensions.gcampax.github.com ||
-gnome-extensions reset window-list@gnome-shell-extensions.gcampax.github.com ||
+gnome-extensions reset Move_Clock@rmy.pobox.com || echo
+gnome-extensions reset just-perfection-desktop@just-perfection || echo
+gnome-extensions reset launch-new-instance@gnome-shell-extensions.gcampax.github.com || echo
+gnome-extensions reset arcmenu@arcmenu.com || echo
+gnome-extensions reset places-menu@gnome-shell-extensions.gcampax.github.com || echo
+gnome-extensions reset window-list@gnome-shell-extensions.gcampax.github.com || echo
 
 
-dconf reset -f /org/gnome/shell/extensions/Move_Clock/ ||
-dconf reset -f /org/gnome/shell/extensions/just-perfection/ ||
-dconf reset -f /org/gnome/shell/extensions/launch-new-instance/ ||
-dconf reset -f /org/gnome/shell/extensions/places-menu/ ||
-dconf reset -f /org/gnome/shell/extensions/window-list/ ||
-dconf reset -f /org/gnome/shell/extensions/arcmenu/ ||
+dconf reset -f /org/gnome/shell/extensions/Move_Clock/ || echo
+dconf reset -f /org/gnome/shell/extensions/just-perfection/ || echo
+dconf reset -f /org/gnome/shell/extensions/launch-new-instance/ || echo
+dconf reset -f /org/gnome/shell/extensions/places-menu/ || echo
+dconf reset -f /org/gnome/shell/extensions/window-list/ || echo
+dconf reset -f /org/gnome/shell/extensions/arcmenu/ || echo
 
 # add new settings
 

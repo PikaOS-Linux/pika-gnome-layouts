@@ -1,17 +1,17 @@
 #! /bin/bash
 
 # Reset everything
-/etc/nobara/scripts/nobara-layouts/layout-scripts/reset.sh ||
+/etc/nobara/scripts/nobara-layouts/layout-scripts/reset.sh || echo
 
-gnome-extensions reset dash-to-dock@micxgx.gmail.com ||
-gnome-extensions reset Move_Clock@rmy.pobox.com ||
-gnome-extensions reset just-perfection-desktop@just-perfection ||
+gnome-extensions reset dash-to-dock@micxgx.gmail.com || echo
+gnome-extensions reset Move_Clock@rmy.pobox.com || echo
+gnome-extensions reset just-perfection-desktop@just-perfection || echo
 
-dconf reset -f /org/gnome/shell/extensions/dash-to-dock/ ||
-dconf reset -f /org/gnome/shell/extensions/Move_Clock/ ||
-dconf reset -f /org/gnome/shell/extensions/just-perfection/ ||
+dconf reset -f /org/gnome/shell/extensions/dash-to-dock/ || echo
+dconf reset -f /org/gnome/shell/extensions/Move_Clock/ || echo
+dconf reset -f /org/gnome/shell/extensions/just-perfection/ || echo
 
-# Enable Dash
+# Enable Dock
 gnome-extensions enable dash-to-dock@micxgx.gmail.com
 # Enable just perfection
 gnome-extensions enable just-perfection-desktop@just-perfection

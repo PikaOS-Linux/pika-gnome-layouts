@@ -1,20 +1,20 @@
 #! /bin/bash
 
 # Reset everything
-/etc/nobara/scripts/nobara-layouts/layout-scripts/reset.sh ||
+/etc/nobara/scripts/nobara-layouts/layout-scripts/reset.sh || echo
 
-gnome-extensions reset dash-to-panel@jderose9.github.com ||
-gnome-extensions reset arcmenu@arcmenu.com ||
-gnome-extensions reset just-perfection-desktop@just-perfection ||
+gnome-extensions reset dash-to-panel@jderose9.github.com || echo
+gnome-extensions reset arcmenu@arcmenu.com || echo
+gnome-extensions reset just-perfection-desktop@just-perfection || echo
 
-dconf reset -f /org/gnome/shell/extensions/dash-to-panel/ ||
-dconf reset -f /org/gnome/shell/extensions/just-perfection/ ||
-dconf reset -f /org/gnome/shell/extensions/arcmenu/ ||
+dconf reset -f /org/gnome/shell/extensions/dash-to-panel/ || echo
+dconf reset -f /org/gnome/shell/extensions/just-perfection/ || echo
+dconf reset -f /org/gnome/shell/extensions/arcmenu/ || echo
 
 # add new settings
 gsettings set org.gnome.shell.extensions.arcmenu menu-hotkey 'Super_L'
 
-gsettings set org.gnome.shell.extensions.arcmenu show-activities-button 'true'
+#gsettings set org.gnome.shell.extensions.arcmenu show-activities-button 'true'
 
 gsettings set org.gnome.shell.extensions.dash-to-panel panel-element-positions '{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"activitiesButton","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'
 
