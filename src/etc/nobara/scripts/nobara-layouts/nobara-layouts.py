@@ -57,7 +57,7 @@ class Application:
                     blur_switch.set_active(False)
 
                 tray_switch = self.builder.get_object("tray_switch")
-                tray_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep trayIconsReloaded@selfmade.pl"], shell=True, stdout=subprocess.DEVNULL)
+                tray_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep appindicatorsupport@rgcjonas.gmail.com"], shell=True, stdout=subprocess.DEVNULL)
                 if (tray_output.returncode) == 0:
                     tray_switch.set_active(True)
                 else:
@@ -79,7 +79,7 @@ class Application:
                     x11_switch.set_active(False)
                 
                 clipboard_switch = self.builder.get_object("clipboard_switch")
-                clipboard_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep gnome-clipboard@b00f.github.io"], shell=True, stdout=subprocess.DEVNULL)
+                clipboard_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep clipboard-history@alexsaveau.dev"], shell=True, stdout=subprocess.DEVNULL)
                 if (clipboard_output.returncode) == 0:
                     clipboard_switch.set_active(True)
                 else:
@@ -120,7 +120,7 @@ class Application:
                 else:
                     spacebar_switch.set_active(False)
                 stats_switch = self.builder.get_object("stats_switch")
-                stats_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep Vitals@CoreCoding.com"], shell=True, stdout=subprocess.DEVNULL)
+                stats_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep freon@UshakovVasilii_Github.yahoo.com"], shell=True, stdout=subprocess.DEVNULL)
                 if (stats_output.returncode) == 0:
                     stats_switch.set_active(True)
                 else:
