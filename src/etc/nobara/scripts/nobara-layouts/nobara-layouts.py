@@ -181,7 +181,12 @@ class Application:
         if settings.get_int("layout-num") == 4:
             macostoggle = self.builder.get_object("macos_button")
             macostoggle.set_active(True)
-        
+        if settings.get_int("layout-num") == 5:
+            macostoggle = self.builder.get_object("gnome2_button")
+            macostoggle.set_active(True)
+        if settings.get_int("layout-num") == 6:
+            macostoggle = self.builder.get_object("unity_button")
+            macostoggle.set_active(True)
 
     ### Layouts ###
     
@@ -202,7 +207,14 @@ class Application:
         settings = Gio.Settings.new("org.nobara.layouts")
         settings.set_int("layout-num", 4)
         subprocess.run(["/etc/nobara/scripts/nobara-layouts/layout-scripts/macos.sh"], shell=True)   
-
+    def on_gnome2_button_pressed(self, widget):
+        settings = Gio.Settings.new("org.nobara.layouts")
+        settings.set_int("layout-num", 5)
+        subprocess.run(["/etc/nobara/scripts/nobara-layouts/layout-scripts/gnome2.sh"], shell=True)   
+    def on_unity_button_pressed(self, widget):
+        settings = Gio.Settings.new("org.nobara.layouts")
+        settings.set_int("layout-num", 6)
+        subprocess.run(["/etc/nobara/scripts/nobara-layouts/layout-scripts/unity.sh"], shell=True)   
     ### Settings ###
 
     #### Desktop Switch ####
