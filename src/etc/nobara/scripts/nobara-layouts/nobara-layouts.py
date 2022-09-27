@@ -133,17 +133,20 @@ class Application:
                     hid_switch.set_active(True)
                 else:
                     hid_switch.set_active(False)
+                pop_switch = self.builder.get_object("pop_switch")
                 pop_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep pop-shell@system76.com"], shell=True, stdout=subprocess.DEVNULL)
                 if (pop_output.returncode) == 0:
-                    pop_switch.set_active(True)
+                   pop_switch.set_active(True)
                 else:
                     pop_switch.set_active(False)
+                gamemode_switch = self.builder.get_object("gamemode_switch")
                 gamemode_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep gamemode@christian.kellner.me"], shell=True, stdout=subprocess.DEVNULL)
                 if (gamemode_output.returncode) == 0:
                     gamemode_switch.set_active(True)
                 else:
                     gamemode_switch.set_active(False)
-                    time.sleep(5.0)
+
+                time.sleep(5.0)
         t1 = threading.Thread(target=extension_refresh_func)
         t1.start()
         
