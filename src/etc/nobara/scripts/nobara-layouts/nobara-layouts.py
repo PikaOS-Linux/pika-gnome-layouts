@@ -95,7 +95,7 @@ class Application:
                     supergfxctl_switch.set_active(False)
 
                 caffeine_switch = self.builder.get_object("caffeine_switch")
-                caffeine_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep espresso@coadmunkee.github.com"], shell=True, stdout=subprocess.DEVNULL)
+                caffeine_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep caffeine@patapon.info"], shell=True, stdout=subprocess.DEVNULL)
                 if (caffeine_output.returncode) == 0:
                     caffeine_switch.set_active(True)
                 else:
