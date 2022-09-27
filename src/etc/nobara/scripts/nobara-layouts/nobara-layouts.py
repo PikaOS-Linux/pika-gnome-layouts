@@ -143,7 +143,7 @@ class Application:
                     gamemode_switch.set_active(True)
                 else:
                     gamemode_switch.set_active(False)
-                time.sleep(10.0)
+                    time.sleep(5.0)
         t1 = threading.Thread(target=extension_refresh_func)
         t1.start()
         
