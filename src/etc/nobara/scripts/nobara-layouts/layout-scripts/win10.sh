@@ -1,7 +1,6 @@
 #! /bin/bash
 
 # Reset everything
-/etc/nobara/scripts/nobara-layouts/layout-scripts/reset.sh || echo
 
 gnome-extensions reset dash-to-panel@jderose9.github.com || echo
 gnome-extensions reset arcmenu@arcmenu.com || echo

@@ -1,8 +1,8 @@
 BuildArch:              noarch
 
 Name:          nobara-gnome-layouts
-Version:       0.9
-Release:       2%{?dist}
+Version:       1.0
+Release:       0%{?dist}
 License:       GPLv2
 Group:         System Environment/Libraries
 Summary:       Nobara's Gnome layouts App
@@ -20,6 +20,7 @@ Requires:	gtk3
 Requires: gnome-shell
 Requires: dconf
 Requires: glib2
+Requires: python3-gobject
 Requires: zenity
 Requires: gnome-x11-gesture-daemon
 Requires: supergfxctl

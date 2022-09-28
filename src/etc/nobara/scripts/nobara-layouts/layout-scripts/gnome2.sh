@@ -1,7 +1,6 @@
 #! /bin/bash
 
 # Reset everything
-/etc/nobara/scripts/nobara-layouts/layout-scripts/reset.sh || echo
 
 gnome-extensions reset Move_Clock@rmy.pobox.com || echo
 gnome-extensions reset just-perfection-desktop@just-perfection || echo
