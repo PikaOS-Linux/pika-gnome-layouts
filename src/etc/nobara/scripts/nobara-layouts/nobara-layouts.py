@@ -115,12 +115,6 @@ class Application:
                 else:
                     weather_switch.set_active(False)
 
-                spacebar_switch = self.builder.get_object("spacebar_switch")
-                spacebar_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep space-bar@luchrioh"], shell=True, stdout=subprocess.DEVNULL)
-                if (spacebar_output.returncode) == 0:
-                    spacebar_switch.set_active(True)
-                else:
-                    spacebar_switch.set_active(False)
                 stats_switch = self.builder.get_object("stats_switch")
                 stats_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep freon@UshakovVasilii_Github.yahoo.com"], shell=True, stdout=subprocess.DEVNULL)
                 if (stats_output.returncode) == 0:
@@ -139,12 +133,6 @@ class Application:
                    pop_switch.set_active(True)
                 else:
                     pop_switch.set_active(False)
-                gamemode_switch = self.builder.get_object("gamemode_switch")
-                gamemode_output = subprocess.run(["gsettings get org.gnome.shell enabled-extensions | grep gamemode@christian.kellner.me"], shell=True, stdout=subprocess.DEVNULL)
-                if (gamemode_output.returncode) == 0:
-                    gamemode_switch.set_active(True)
-                else:
-                    gamemode_switch.set_active(False)
 
                 time.sleep(5.0)
         t1 = threading.Thread(target=extension_refresh_func)
@@ -294,13 +282,6 @@ class Application:
         else:
             subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/weather.sh disable"], shell=True)
     pass
-    #### spacebar Switch ####
-    def on_spacebar_switch_active_notify(self, switch, state):
-        if switch.get_active() == True:
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/spacebar.sh enable"], shell=True)
-        else:
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/spacebar.sh disable"], shell=True)
-    pass
     #### stats Switch ####
     def on_stats_switch_active_notify(self, switch, state):
         if switch.get_active() == True:
@@ -321,13 +302,6 @@ class Application:
                 subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/pop.sh enable"], shell=True)
         else:
             subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/pop.sh disable"], shell=True)
-    pass
-    #### gamemode Switch ####
-    def on_gamemode_switch_active_notify(self, switch, state):
-        if switch.get_active() == True:
-                subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/gamemode.sh enable"], shell=True)
-        else:
-            subprocess.run(["/etc/nobara/scripts/nobara-layouts/settings-scripts/gamemode.sh disable"], shell=True)
     pass
 
     def on_install_all_pressed(self, widget):
