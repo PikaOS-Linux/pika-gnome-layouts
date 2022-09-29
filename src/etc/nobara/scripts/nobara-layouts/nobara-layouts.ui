@@ -2,16 +2,8 @@
 <!-- Generated with glade 3.38.2 -->
 <interface>
   <requires lib="gtk+" version="3.24"/>
-  <object class="GtkRadioButton" id="radiobutton1">
-    <property name="label" translatable="yes">radiobutton</property>
-    <property name="visible">True</property>
-    <property name="can-focus">True</property>
-    <property name="receives-default">False</property>
-    <property name="active">True</property>
-    <property name="draw-indicator">True</property>
-  </object>
   <object class="GtkApplicationWindow" id="main_window">
-    <property name="width-request">600</property>
+    <property name="width-request">700</property>
     <property name="height-request">500</property>
     <property name="can-focus">False</property>
     <property name="title" translatable="yes">Nobara Gnome Layouts</property>
@@ -51,7 +43,7 @@
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
                     <child>
-                      <!-- n-columns=2 n-rows=3 -->
+                      <!-- n-columns=3 n-rows=3 -->
                       <object class="GtkGrid" id="layouts_grid">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
@@ -91,7 +83,6 @@
                                 <property name="receives-default">False</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="active">True</property>
                                 <property name="draw-indicator">True</property>
                                 <property name="group">radiobutton1</property>
                                 <signal name="pressed" handler="on_win10_button_pressed" swapped="no"/>
@@ -106,55 +97,6 @@
                           <packing>
                             <property name="left-attach">0</property>
                             <property name="top-attach">0</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkBox" id="gnome_box">
-                            <property name="visible">True</property>
-                            <property name="can-focus">False</property>
-                            <property name="orientation">vertical</property>
-                            <property name="spacing">2</property>
-                            <child>
-                              <object class="GtkImage" id="gnome_preview">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="margin-start">10</property>
-                                <property name="margin-end">10</property>
-                                <property name="margin-top">10</property>
-                                <property name="margin-bottom">10</property>
-                                <property name="pixbuf">../../../../../../../../../etc/nobara/scripts/nobara-layouts/previews/gnome.svg</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkRadioButton" id="gnome_button">
-                                <property name="label" translatable="yes">GNOME</property>
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="active">True</property>
-                                <property name="draw-indicator">True</property>
-                                <property name="group">radiobutton1</property>
-                                <signal name="pressed" handler="on_gnome_button_pressed" swapped="no"/>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="left-attach">0</property>
-                            <property name="top-attach">1</property>
                           </packing>
                         </child>
                         <child>
@@ -189,7 +131,6 @@
                                 <property name="receives-default">False</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="active">True</property>
                                 <property name="draw-indicator">True</property>
                                 <property name="group">radiobutton1</property>
                                 <signal name="pressed" handler="on_win11_button_pressed" swapped="no"/>
@@ -238,7 +179,6 @@
                                 <property name="receives-default">False</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="active">True</property>
                                 <property name="draw-indicator">True</property>
                                 <property name="group">radiobutton1</property>
                                 <signal name="pressed" handler="on_macos_button_pressed" swapped="no"/>
@@ -251,7 +191,55 @@
                             </child>
                           </object>
                           <packing>
-                            <property name="left-attach">1</property>
+                            <property name="left-attach">2</property>
+                            <property name="top-attach">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="unity_box">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">2</property>
+                            <child>
+                              <object class="GtkImage" id="unity_preview">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <property name="margin-start">10</property>
+                                <property name="margin-end">10</property>
+                                <property name="margin-top">10</property>
+                                <property name="margin-bottom">10</property>
+                                <property name="pixbuf">../../../../../../../../../etc/nobara/scripts/nobara-layouts/previews/unity.svg</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkRadioButton" id="unity_button">
+                                <property name="label" translatable="yes">Unity</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">False</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <property name="draw-indicator">True</property>
+                                <property name="group">radiobutton1</property>
+                                <signal name="pressed" handler="on_unity_button_pressed" swapped="no"/>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="left-attach">2</property>
                             <property name="top-attach">1</property>
                           </packing>
                         </child>
@@ -299,18 +287,18 @@
                             </child>
                           </object>
                           <packing>
-                            <property name="left-attach">0</property>
-                            <property name="top-attach">2</property>
+                            <property name="left-attach">1</property>
+                            <property name="top-attach">1</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkBox" id="unity_box">
+                          <object class="GtkBox" id="gnome_box">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
                             <property name="orientation">vertical</property>
                             <property name="spacing">2</property>
                             <child>
-                              <object class="GtkImage" id="unity_preview">
+                              <object class="GtkImage" id="gnome_preview">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
                                 <property name="halign">center</property>
@@ -319,7 +307,7 @@
                                 <property name="margin-end">10</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
-                                <property name="pixbuf">../../../../../../../../../etc/nobara/scripts/nobara-layouts/previews/unity.svg</property>
+                                <property name="pixbuf">../../../../../../../../../etc/nobara/scripts/nobara-layouts/previews/gnome.svg</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -328,8 +316,8 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkRadioButton" id="unity_button">
-                                <property name="label" translatable="yes">Unity</property>
+                              <object class="GtkRadioButton" id="gnome_button">
+                                <property name="label" translatable="yes">GNOME</property>
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">False</property>
@@ -337,7 +325,7 @@
                                 <property name="valign">center</property>
                                 <property name="draw-indicator">True</property>
                                 <property name="group">radiobutton1</property>
-                                <signal name="pressed" handler="on_unity_button_pressed" swapped="no"/>
+                                <signal name="pressed" handler="on_gnome_button_pressed" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">True</property>
@@ -347,9 +335,18 @@
                             </child>
                           </object>
                           <packing>
-                            <property name="left-attach">1</property>
-                            <property name="top-attach">2</property>
+                            <property name="left-attach">0</property>
+                            <property name="top-attach">1</property>
                           </packing>
+                        </child>
+                        <child>
+                          <placeholder/>
+                        </child>
+                        <child>
+                          <placeholder/>
+                        </child>
+                        <child>
+                          <placeholder/>
                         </child>
                       </object>
                     </child>
@@ -1210,5 +1207,13 @@
         </child>
       </object>
     </child>
+  </object>
+  <object class="GtkRadioButton" id="radiobutton1">
+    <property name="label" translatable="yes">radiobutton</property>
+    <property name="visible">True</property>
+    <property name="can-focus">True</property>
+    <property name="receives-default">False</property>
+    <property name="active">True</property>
+    <property name="draw-indicator">True</property>
   </object>
 </interface>
