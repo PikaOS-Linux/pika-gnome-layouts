@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Nobara Desktop Layouts
+Exec=/usr/bin/nobara-gnome-layouts
+Icon=desktop
+Terminal=false
+Type=Application
+Terminal=false
+Categories=GNOME;GTK;Utility;
+Keywords=Gnome;GTK
+OnlyShowIn=GNOME

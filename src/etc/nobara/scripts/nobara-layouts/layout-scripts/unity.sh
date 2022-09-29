@@ -19,7 +19,7 @@ gnome-extensions reset window-list@gnome-shell-extensions.gcampax.github.com || 
 
 # add new settings
 
-gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 64
+gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 48
 
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed true
 

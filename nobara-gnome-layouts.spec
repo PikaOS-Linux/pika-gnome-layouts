@@ -2,7 +2,7 @@ BuildArch:              noarch
 
 Name:          nobara-gnome-layouts
 Version:       1.0
-Release:       4%{?dist}
+Release:       5%{?dist}
 License:       GPLv2
 Group:         System Environment/Libraries
 Summary:       Nobara's Gnome layouts App
@@ -71,6 +71,7 @@ Nobara's Python3 & GTK3 built Gnome layouts App
 %attr(0755, root, root) "/etc/nobara/scripts/nobara-layouts/settings-scripts/*.sh"
 %attr(0644, root, root) "/etc/nobara/scripts/nobara-layouts/previews/*.svg"
 %attr(0644, root, root) "/usr/share/licenses/nobara-gnome-layouts/LICENSE"
+%attr(0644, root, root) "/usr/share/applications/nobara-gnome-layouts.desktop"
 
 %post
 glib-compile-schemas /usr/share/glib-2.0/schemas/
