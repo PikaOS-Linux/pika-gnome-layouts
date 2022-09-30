@@ -13,10 +13,10 @@ URL:           https://github.com/CosmicFusion/cosmo-gnome-layouts
 Source0:        %{name}-%{version}-%{release}.tar.gz
 
 BuildRequires:	wget
-Requires:      /usr/bin/bash
-Requires:	python3
-Requires:	python
-Requires:	gtk3
+Requires: /usr/bin/bash
+Requires: python3
+Requires: python
+Requires: gtk3
 Requires: gnome-shell
 Requires: dconf
 Requires: glib2
