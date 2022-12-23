@@ -33,3 +33,5 @@ gnome-extensions enable places-menu@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable window-list@gnome-shell-extensions.gcampax.github.com
 # Enable arcmenu
 gnome-extensions enable arcmenu@arcmenu.com
+# Enable Desktop Icons
+gnome-extensions enable ding@rastersoft.com

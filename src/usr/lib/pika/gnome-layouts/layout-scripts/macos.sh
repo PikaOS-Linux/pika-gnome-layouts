@@ -33,3 +33,5 @@ gsettings set org.gnome.shell.extensions.just-perfection clock-menu-position 1
 gnome-extensions enable ubuntu-dock@ubuntu.com
 # Enable just perfection
 gnome-extensions enable just-perfection-desktop@just-perfection
+# Enable Desktop Icons
+gnome-extensions enable ding@rastersoft.com

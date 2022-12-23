@@ -29,5 +29,7 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'LEFT'
 gnome-extensions enable ubuntu-dock@ubuntu.com
 # Enable just perfection
 gnome-extensions enable just-perfection-desktop@just-perfection
+# Enable Desktop Icons
+gnome-extensions enable ding@rastersoft.com
 
 

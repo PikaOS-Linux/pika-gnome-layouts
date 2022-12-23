@@ -28,3 +28,5 @@ gnome-extensions enable dash-to-panel@jderose9.github.com
 gnome-extensions enable arcmenu@arcmenu.com
 # Enable just perfection
 gnome-extensions enable just-perfection-desktop@just-perfection
+# Enable Desktop Icons
+gnome-extensions enable ding@rastersoft.com
