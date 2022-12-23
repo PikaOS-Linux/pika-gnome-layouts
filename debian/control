@@ -1,0 +1,22 @@
+Source: pika-gnome-layouts
+Section: misc
+Priority: optional
+Maintainer: Ward Nakchbandi <hotrod.master@hotmail.com>
+Standards-Version: 4.6.1
+Build-Depends: debhelper-compat (= 13)
+
+Package: pika-gnome-layouts
+Architecture: all
+Depends: pika-welcome,
+	gnome-shell-extension-arc-menu,
+	gnome-shell-extension-custom-accent-colors,
+	gnome-shell-extension-just-perfection,
+	gnome-shell-extension-launch-new-instance,
+	gnome-shell-extension-places-menu,
+	gnome-shell-extension-user-theme,
+	gnome-shell-extension-window-list,
+	gnome-shell-extension-dash-to-panel,
+	gnome-shell-extension-ubuntu-dock,
+	gnome-shell-extension-desktop-icons-ng,
+	dconf-cli
+Description: PikaOS Gnome Desktop Layouts Selector
