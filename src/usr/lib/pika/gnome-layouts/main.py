@@ -195,6 +195,36 @@ class Application:
         settings.set_int("layout-num", 6)
         subprocess.run(["/etc/pika/scripts/pika-layouts/layout-scripts/unity.sh"], shell=True)   
     ### Settings ###
+    
+    ### Accent Colors
+
+    def blue_accent_button_pressed_cb (self, widget):
+        subprocess.run(["/usr/lib/pika/gnome-layouts/dconf-accent.sh blue"], shell=True)
+        subprocess.run(["pkexec /usr/lib/pika/gnome-layouts/papirus-folders -u -C blue"], shell=True)
+    def green_accent_button_pressed_cb (self, widget):
+        subprocess.run(["/usr/lib/pika/gnome-layouts/dconf-accent.sh green"], shell=True)
+        subprocess.run(["pkexec /usr/lib/pika/gnome-layouts/papirus-folders -u -C green"], shell=True)
+    def yellow_accent_button_pressed_cb (self, widget):
+        subprocess.run(["/usr/lib/pika/gnome-layouts/dconf-accent.sh yellow"], shell=True)
+        subprocess.run(["pkexec /usr/lib/pika/gnome-layouts/papirus-folders -u -C yellow"], shell=True)
+    def orange_accent_button_pressed_cb (self, widget):
+        subprocess.run(["/usr/lib/pika/gnome-layouts/dconf-accent.sh orange"], shell=True)
+        subprocess.run(["pkexec /usr/lib/pika/gnome-layouts/papirus-folders -u -C orange"], shell=True)
+    def red_accent_button_pressed_cb (self, widget):
+        subprocess.run(["/usr/lib/pika/gnome-layouts/dconf-accent.sh red"], shell=True)
+        subprocess.run(["pkexec /usr/lib/pika/gnome-layouts/papirus-folders -u -C red"], shell=True)
+    def magenta_accent_button_pressed_cb (self, widget):
+        subprocess.run(["/usr/lib/pika/gnome-layouts/dconf-accent.sh magenta"], shell=True)
+        subprocess.run(["pkexec /usr/lib/pika/gnome-layouts/papirus-folders -u -C magenta"], shell=True)
+    def purple_accent_button_pressed_cb (self, widget):
+        subprocess.run(["/usr/lib/pika/gnome-layouts/dconf-accent.sh purple"], shell=True)
+        subprocess.run(["pkexec /usr/lib/pika/gnome-layouts/papirus-folders -u -C purple"], shell=True)
+    def brown_accent_button_pressed_cb (self, widget):
+        subprocess.run(["/usr/lib/pika/gnome-layouts/dconf-accent.sh brown"], shell=True)
+        subprocess.run(["pkexec /usr/lib/pika/gnome-layouts/papirus-folders -u -C brown"], shell=True)
+    def gray_accent_button_pressed_cb (self, widget):
+        subprocess.run(["/usr/lib/pika/gnome-layouts/dconf-accent.sh gray"], shell=True)
+        subprocess.run(["pkexec /usr/lib/pika/gnome-layouts/papirus-folders -u -C grey"], shell=True)
 
     #### Desktop Switch ####
     def on_desktop_switch_active_notify(self, switch, state):

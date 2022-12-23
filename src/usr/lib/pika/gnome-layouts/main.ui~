@@ -14,7 +14,7 @@
     <property name="width-request">700</property>
     <property name="height-request">535</property>
     <property name="can-focus">False</property>
-    <property name="title" translatable="yes">Nobara Gnome Layouts</property>
+    <property name="title" translatable="yes">PikaOS Gnome Layouts</property>
     <property name="default-width">700</property>
     <property name="default-height">535</property>
     <property name="show-menubar">False</property>
@@ -358,11 +358,21 @@
                             <property name="valign">start</property>
                             <property name="homogeneous">True</property>
                             <child>
-                              <object class="GtkImage" id="blue">
+                              <object class="GtkButton" id="blue_accent_button">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="tooltip-text" translatable="yes">Blue</property>
-                                <property name="pixbuf">../../../../../../../../Downloads/accent/blue-svg.svg</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <signal name="pressed" handler="blue_accent_button_pressed_cb" swapped="no"/>
+                                <child>
+                                  <object class="GtkImage" id="blue_accent_image">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="tooltip-text" translatable="yes">Blue</property>
+                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/blue.svg</property>
+                                  </object>
+                                </child>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -371,11 +381,21 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkImage" id="green">
+                              <object class="GtkButton" id="green_accent_button">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="tooltip-text" translatable="yes">Green</property>
-                                <property name="pixbuf">../../../../../../../../Downloads/accent/blue-svg.svg</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <signal name="pressed" handler="green_accent_button_pressed_cb" swapped="no"/>
+                                <child>
+                                  <object class="GtkImage" id="green_accent_image">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="tooltip-text" translatable="yes">Green</property>
+                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/green.svg</property>
+                                  </object>
+                                </child>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -384,11 +404,21 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkImage" id="yellow">
+                              <object class="GtkButton" id="yellow_accent_button">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="tooltip-text" translatable="yes">Yellow</property>
-                                <property name="pixbuf">../../../../../../../../Downloads/accent/blue-svg.svg</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <signal name="pressed" handler="yellow_accent_button_pressed_cb" swapped="no"/>
+                                <child>
+                                  <object class="GtkImage" id="yellow_accent_image">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="tooltip-text" translatable="yes">Yellow</property>
+                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/yellow.svg</property>
+                                  </object>
+                                </child>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -397,11 +427,21 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkImage" id="orange">
+                              <object class="GtkButton" id="orange_accent_button">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="tooltip-text" translatable="yes">Orange</property>
-                                <property name="pixbuf">../../../../../../../../Downloads/accent/blue-svg.svg</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <signal name="pressed" handler="orange_accent_button_pressed_cb" swapped="no"/>
+                                <child>
+                                  <object class="GtkImage" id="orange_accent_image">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="tooltip-text" translatable="yes">Orange</property>
+                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/orange.svg</property>
+                                  </object>
+                                </child>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -410,11 +450,21 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkImage" id="red">
+                              <object class="GtkButton" id="red_accent_button">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="tooltip-text" translatable="yes">Red</property>
-                                <property name="pixbuf">../../../../../../../../Downloads/accent/blue-svg.svg</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <signal name="pressed" handler="red_accent_button_pressed_cb" swapped="no"/>
+                                <child>
+                                  <object class="GtkImage" id="red_accent_image">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="tooltip-text" translatable="yes">Red</property>
+                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/red.svg</property>
+                                  </object>
+                                </child>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -423,11 +473,21 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkImage" id="magenta">
+                              <object class="GtkButton" id="magenta_accent_button">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="tooltip-text" translatable="yes">Magenta</property>
-                                <property name="pixbuf">../../../../../../../../Downloads/accent/blue-svg.svg</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <signal name="pressed" handler="magenta_accent_button_pressed_cb" swapped="no"/>
+                                <child>
+                                  <object class="GtkImage" id="magenta_accent_image">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="tooltip-text" translatable="yes">Magenta</property>
+                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/magenta.svg</property>
+                                  </object>
+                                </child>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -436,11 +496,21 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkImage" id="purple">
+                              <object class="GtkButton" id="purple_accent_button">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="tooltip-text" translatable="yes">Purple</property>
-                                <property name="pixbuf">../../../../../../../../Downloads/accent/blue-svg.svg</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <signal name="pressed" handler="purple_accent_button_pressed_cb" swapped="no"/>
+                                <child>
+                                  <object class="GtkImage" id="purple_accent_image">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="tooltip-text" translatable="yes">Purple</property>
+                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/purple.svg</property>
+                                  </object>
+                                </child>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -449,11 +519,21 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkImage" id="brown">
+                              <object class="GtkButton" id="brown_accent_button">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="tooltip-text" translatable="yes">Brown (please don't use this)</property>
-                                <property name="pixbuf">../../../../../../../../Downloads/accent/blue-svg.svg</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <signal name="pressed" handler="brown_accent_button_pressed_cb" swapped="no"/>
+                                <child>
+                                  <object class="GtkImage" id="brown_accent_image">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="tooltip-text" translatable="yes">Brown (please don't use this)</property>
+                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/brown.svg</property>
+                                  </object>
+                                </child>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -462,11 +542,21 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkImage" id="gray">
+                              <object class="GtkButton" id="gray_accent_button">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="tooltip-text" translatable="yes">Gray</property>
-                                <property name="pixbuf">../../../../../../../../Downloads/accent/blue-svg.svg</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <signal name="pressed" handler="gray_accent_button_pressed_cb" swapped="no"/>
+                                <child>
+                                  <object class="GtkImage" id="gray_accent_image">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="tooltip-text" translatable="yes">Gray</property>
+                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/gray.svg</property>
+                                  </object>
+                                </child>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
