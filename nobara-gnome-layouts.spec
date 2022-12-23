@@ -26,30 +26,8 @@ Requires: gnome-x11-gesture-daemon
 Requires: supergfxctl
 
 # Extensions
-
-Requires: gnome-shell-extension-frippery-move-clock
-Requires: gnome-shell-extension-launch-new-instance
-Requires: gnome-shell-extension-just-perfection
-Requires: gnome-shell-extension-arc-menu
-Requires: gnome-shell-extension-auto-move-windows
-Requires: gnome-shell-extension-caffeine
-Requires: gnome-shell-extension-dash-to-dock
-Requires: gnome-shell-extension-dash-to-panel
-Requires: gnome-shell-extension-launch-new-instance
 Requires: gnome-shell-extension-places-menu
-Requires: gnome-shell-extension-application-volume-mixer
-Requires: gnome-shell-extension-blur-my-shell
-Requires: gnome-shell-extension-clipboard-history
-Requires: gnome-shell-extension-dash-to-panel
-Requires: gnome-shell-extension-desktop-icons
-Requires: gnome-shell-extension-gsconnect
-Requires: gnome-shell-extension-openweather
-Requires: gnome-shell-extension-pop-shell
-Requires: gnome-shell-extension-sound-output-device-chooser
 Requires: gnome-shell-extension-window-list 
-Requires: gnome-shell-extension-freon
-Requires: gnome-shell-extension-wireless-hid
-Requires: gnome-shell-extension-gesture-improvements
 
 %install
 tar -xf %{SOURCE0}

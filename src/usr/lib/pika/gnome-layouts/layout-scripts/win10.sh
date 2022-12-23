@@ -16,7 +16,7 @@ gnome-extensions reset places-menu@gnome-shell-extensions.gcampax.github.com || 
 gnome-extensions reset window-list@gnome-shell-extensions.gcampax.github.com || echo
 
 # add new settings
-gsettings set org.gnome.shell.extensions.arcmenu menu-hotkey 'Super_L'
+dconf write /org/gnome/shell/extensions/arcmenu/menu-hotkey "'Super_L'"
 
 #gsettings set org.gnome.shell.extensions.arcmenu show-activities-button 'true'
 

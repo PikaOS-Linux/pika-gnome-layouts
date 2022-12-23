@@ -17,17 +17,17 @@ gnome-extensions reset window-list@gnome-shell-extensions.gcampax.github.com || 
 
 # add new settings
 
-gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 48
+dconf write /org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size 48
 
-gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed true
+dconf write /org/gnome/shell/extensions/dash-to-dock/dock-fixed true
 
-gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
+dconf write /org/gnome/shell/extensions/dash-to-dock/extend-height false
 
-gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
+dconf write /org/gnome/shell/extensions/dash-to-dock/dock-position "'BOTTOM'"
 
 #
 
-gsettings set org.gnome.shell.extensions.just-perfection clock-menu-position 1
+dconf write /org/gnome/shell/extensions/just-perfection/clock-menu-position 1
 
 # Enable Dock
 gnome-extensions enable ubuntu-dock@ubuntu.com

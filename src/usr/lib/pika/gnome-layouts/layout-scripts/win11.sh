@@ -18,19 +18,19 @@ gnome-extensions reset places-menu@gnome-shell-extensions.gcampax.github.com || 
 gnome-extensions reset window-list@gnome-shell-extensions.gcampax.github.com || echo
 
 # add new settings
-gsettings set org.gnome.shell.extensions.arcmenu menu-hotkey 'Super_L'
+dconf write /org/gnome/shell/extensions/arcmenu/menu-hotkey "'Super_L'"
 
-gsettings set org.gnome.shell.extensions.arcmenu force-menu-location 'BottomCentered'
+dconf write /org/gnome/shell/extensions/arcmenu/force-menu-location "'BottomCentered'"
 
-gsettings set org.gnome.shell.extensions.arcmenu menu-button-position-offset 1
+dconf write /org/gnome/shell/extensions/arcmenu/menu-button-position-offset 1
 
-gsettings set org.gnome.shell.extensions.arcmenu menu-layout 'Eleven'
+dconf write /org/gnome/shell/extensions/arcmenu/menu-layout "'Eleven'"
 
-gsettings set org.gnome.shell.extensions.arcmenu position-in-panel 'Center'
+dconf write /org/gnome/shell/extensions/arcmenu/position-in-panel "'Center'"
 
-gsettings set org.gnome.shell.extensions.arcmenu show-activities-button 'true'
+dconf write /org/gnome/shell/extensions/arcmenu/show-activities-button 'true'
 
-gsettings set org.gnome.shell.extensions.dash-to-panel panel-element-positions '{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"taskbar","visible":true,"position":"centerMonitor"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"activitiesButton","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'
+dconf write /org/gnome/shell/extensions/dash-to-panel/panel-element-positions "'{"0":[{"element":"showAppsButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"taskbar","visible":true,"position":"centerMonitor"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"activitiesButton","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedBR"}]}'"
 
 # Enable taskbar
 gnome-extensions enable dash-to-panel@jderose9.github.com

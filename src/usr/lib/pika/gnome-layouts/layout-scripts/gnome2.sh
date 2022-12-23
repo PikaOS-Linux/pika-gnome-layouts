@@ -17,11 +17,11 @@ gnome-extensions reset window-list@gnome-shell-extensions.gcampax.github.com || 
 
 # add new settings
 
-gsettings set org.gnome.shell.extensions.arcmenu menu-hotkey 'Super_L'
+dconf write /org/gnome/shell/extensions/arcmenu/menu-hotkey "'Super_L'"
 
-gsettings set org.gnome.shell.extensions.arcmenu menu-layout 'GnomeMenu'
+dconf write /org/gnome/shell/extensions/arcmenu/menu-layout "'GnomeMenu'"
 
-gsettings set org.gnome.shell.extensions.arcmenu menu-button-appearance 'Text'
+dconf write /org/gnome/shell/extensions/arcmenu/menu-button-appearance "'Text'"
 
 # Enable just perfection
 gnome-extensions enable just-perfection-desktop@just-perfection
