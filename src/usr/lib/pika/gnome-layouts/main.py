@@ -16,15 +16,19 @@ class Application:
         self.column_names = False
         self.drop_nan = False
         self.df = None
-        application_id="org.nobara.layouts"
+        application_id="org.pika.layouts"
         
         self.builder = Gtk.Builder()
-        self.builder.add_from_file("/etc/nobara/scripts/nobara-layouts/nobara-layouts.ui")
+        self.builder.add_from_file("/usr/lib/pika/gnome-layouts/main.ui")
         self.builder.connect_signals(self)
         win = self.builder.get_object("main_window")
         
         self.builder.get_object("install_all").hide()
         #win.connect("destroy", Gtk.main_quit)
+        
+        ### Hidden entries
+        
+        self.builder.get_object("audio_box").hide()
         
         ### Enable Extensions
         

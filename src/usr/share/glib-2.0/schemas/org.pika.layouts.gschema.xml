@@ -1,5 +1,5 @@
 <schemalist>
-  <schema path="/org/nobara/layouts/" id="org.nobara.layouts">
+  <schema path="/org/pika/layouts/" id="org.pika.layouts">
     <key type="i" name="layout-num">
       <default>3</default>
       <summary>What layout is selected.</summary>

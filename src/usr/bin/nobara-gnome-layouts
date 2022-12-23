@@ -1,7 +1,0 @@
-#! /bin/bash
-if echo $XDG_SESSION_DESKTOP | grep -i gnome ; 
-then
-	python3 /etc/nobara/scripts/nobara-layouts/nobara-layouts.py
-else
-	zenity --error --text="current session isn't gnome"
-fi

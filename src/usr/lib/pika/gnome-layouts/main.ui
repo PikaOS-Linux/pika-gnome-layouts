@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.38.2 -->
+<!-- Generated with glade 3.40.0 -->
 <interface>
   <requires lib="gtk+" version="3.24"/>
   <object class="GtkRadioButton" id="radiobutton1">
@@ -78,7 +78,7 @@
                                 <property name="margin-end">10</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
-                                <property name="pixbuf">../../../../../../../../../etc/nobara/scripts/nobara-layouts/previews/win10.svg</property>
+                                <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/win10.svg</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -126,7 +126,7 @@
                                 <property name="margin-end">10</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
-                                <property name="pixbuf">../../../../../../../../../etc/nobara/scripts/nobara-layouts/previews/win11.svg</property>
+                                <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/win11.svg</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -174,7 +174,7 @@
                                 <property name="margin-end">10</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
-                                <property name="pixbuf">../../../../../../../../../etc/nobara/scripts/nobara-layouts/previews/macos.svg</property>
+                                <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/macos.svg</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -222,7 +222,7 @@
                                 <property name="margin-end">10</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
-                                <property name="pixbuf">../../../../../../../../../etc/nobara/scripts/nobara-layouts/previews/unity.svg</property>
+                                <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/unity.svg</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -270,7 +270,7 @@
                                 <property name="margin-end">10</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
-                                <property name="pixbuf">../../../../../../../../../etc/nobara/scripts/nobara-layouts/previews/gnome2.svg</property>
+                                <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/gnome2.svg</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -318,7 +318,7 @@
                                 <property name="margin-end">10</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
-                                <property name="pixbuf">../../../../../../../../../etc/nobara/scripts/nobara-layouts/previews/gnome.svg</property>
+                                <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/gnome.svg</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -351,13 +351,135 @@
                           </packing>
                         </child>
                         <child>
-                          <placeholder/>
-                        </child>
-                        <child>
-                          <placeholder/>
-                        </child>
-                        <child>
-                          <placeholder/>
+                          <object class="GtkBox" id="accent_box">
+                            <property name="name">accent_box</property>
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="valign">start</property>
+                            <property name="homogeneous">True</property>
+                            <child>
+                              <object class="GtkImage" id="blue">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="tooltip-text" translatable="yes">Blue</property>
+                                <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/blue.svg</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkImage" id="green">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="tooltip-text" translatable="yes">Green</property>
+                                <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/green.svg</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkImage" id="yellow">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="tooltip-text" translatable="yes">Yellow</property>
+                                <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/yellow.svg</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">2</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkImage" id="orange">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="tooltip-text" translatable="yes">Orange</property>
+                                <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/orange.svg</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">3</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkImage" id="red">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="tooltip-text" translatable="yes">Red</property>
+                                <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/red.svg</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">4</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkImage" id="magenta">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="tooltip-text" translatable="yes">Magenta</property>
+                                <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/magenta.svg</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">5</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkImage" id="purple">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="tooltip-text" translatable="yes">Purple</property>
+                                <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/purple.svg</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">6</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkImage" id="brown">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="tooltip-text" translatable="yes">Brown (please don't use this)</property>
+                                <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/brown.svg</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">7</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkImage" id="gray">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="tooltip-text" translatable="yes">Gray</property>
+                                <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/gray.svg</property>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">8</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="left-attach">0</property>
+                            <property name="top-attach">2</property>
+                            <property name="width">3</property>
+                          </packing>
                         </child>
                       </object>
                     </child>
@@ -695,6 +817,7 @@
                           <object class="GtkBox" id="audio_box">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
+                            <property name="no-show-all">True</property>
                             <property name="halign">start</property>
                             <property name="hexpand">True</property>
                             <child>
@@ -729,7 +852,7 @@
                           </object>
                           <packing>
                             <property name="left-attach">2</property>
-                            <property name="top-attach">0</property>
+                            <property name="top-attach">6</property>
                           </packing>
                         </child>
                         <child>
@@ -770,7 +893,7 @@
                           </object>
                           <packing>
                             <property name="left-attach">2</property>
-                            <property name="top-attach">1</property>
+                            <property name="top-attach">0</property>
                           </packing>
                         </child>
                         <child>
@@ -798,7 +921,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
                                 <property name="halign">start</property>
-                                <property name="label" translatable="yes">Enable Touchpad Gestures Improvements</property>
+                                <property name="label" translatable="yes">Enable Touchpad Gestures On X11</property>
                                 <property name="xalign">0</property>
                               </object>
                               <packing>
@@ -811,7 +934,7 @@
                           </object>
                           <packing>
                             <property name="left-attach">2</property>
-                            <property name="top-attach">2</property>
+                            <property name="top-attach">1</property>
                           </packing>
                         </child>
                         <child>
@@ -852,7 +975,7 @@
                           </object>
                           <packing>
                             <property name="left-attach">2</property>
-                            <property name="top-attach">3</property>
+                            <property name="top-attach">2</property>
                           </packing>
                         </child>
                         <child>
@@ -893,7 +1016,7 @@
                           </object>
                           <packing>
                             <property name="left-attach">2</property>
-                            <property name="top-attach">4</property>
+                            <property name="top-attach">3</property>
                           </packing>
                         </child>
                         <child>
@@ -934,7 +1057,7 @@
                           </object>
                           <packing>
                             <property name="left-attach">2</property>
-                            <property name="top-attach">6</property>
+                            <property name="top-attach">5</property>
                           </packing>
                         </child>
                         <child>
@@ -1045,7 +1168,7 @@
                           </object>
                           <packing>
                             <property name="left-attach">2</property>
-                            <property name="top-attach">5</property>
+                            <property name="top-attach">4</property>
                           </packing>
                         </child>
                         <child>

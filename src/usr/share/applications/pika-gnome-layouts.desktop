@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=Nobara Desktop Layouts
-Exec=/usr/bin/nobara-gnome-layouts
+Name=PikaOS Desktop Layouts
+Exec=/usr/bin/pika-gnome-layouts
 Icon=desktop
 Terminal=false
 Type=Application
