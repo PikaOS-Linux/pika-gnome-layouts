@@ -172,28 +172,28 @@ class Application:
     def on_win10_button_pressed(self, widget):
         settings = Gio.Settings.new("org.pika.layouts")
         settings.set_int("layout-num", 1)
-        subprocess.run(["/etc/pika/scripts/pika-layouts/layout-scripts/win10.sh"], shell=True)
+        subprocess.run(["/usr/lib/pika/gnome-layouts/layout-scripts/win10.sh"], shell=True)
         
     def on_win11_button_pressed(self, widget):
         settings = Gio.Settings.new("org.pika.layouts")
         settings.set_int("layout-num", 2)
-        subprocess.run(["/etc/pika/scripts/pika-layouts/layout-scripts/win11.sh"], shell=True)        
+        subprocess.run(["/usr/lib/pika/gnome-layouts/layout-scripts/win11.sh"], shell=True)        
     def on_gnome_button_pressed(self, widget):
         settings = Gio.Settings.new("org.pika.layouts")
         settings.set_int("layout-num", 3)
-        subprocess.run(["/etc/pika/scripts/pika-layouts/layout-scripts/reset.sh"], shell=True)   
+        subprocess.run(["/usr/lib/pika/gnome-layouts/layout-scripts/reset.sh"], shell=True)   
     def on_macos_button_pressed(self, widget):
         settings = Gio.Settings.new("org.pika.layouts")
         settings.set_int("layout-num", 4)
-        subprocess.run(["/etc/pika/scripts/pika-layouts/layout-scripts/macos.sh"], shell=True)   
+        subprocess.run(["/usr/lib/pika/gnome-layouts/layout-scripts/macos.sh"], shell=True)   
     def on_gnome2_button_pressed(self, widget):
         settings = Gio.Settings.new("org.pika.layouts")
         settings.set_int("layout-num", 5)
-        subprocess.run(["/etc/pika/scripts/pika-layouts/layout-scripts/gnome2.sh"], shell=True)   
+        subprocess.run(["/usr/lib/pika/gnome-layouts/layout-scripts/gnome2.sh"], shell=True)   
     def on_unity_button_pressed(self, widget):
         settings = Gio.Settings.new("org.pika.layouts")
         settings.set_int("layout-num", 6)
-        subprocess.run(["/etc/pika/scripts/pika-layouts/layout-scripts/unity.sh"], shell=True)   
+        subprocess.run(["/usr/lib/pika/gnome-layouts/layout-scripts/unity.sh"], shell=True)   
     ### Settings ###
     
     ### Accent Colors
@@ -238,104 +238,104 @@ class Application:
     #### Desktop Switch ####
     def on_desktop_switch_active_notify(self, switch, state):
         if switch.get_active() == True :
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/desktop.sh enable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/desktop.sh enable"], shell=True)
         else:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/desktop.sh disable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/desktop.sh disable"], shell=True)
     pass
     #### Audio Switch ####
     def on_audio_switch_active_notify(self, switch, state):
         if switch.get_active() == True :
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/audio.sh enable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/audio.sh enable"], shell=True)
         else:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/audio.sh disable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/audio.sh disable"], shell=True)
     pass
     #### Blur Switch ####  
     def on_blur_switch_active_notify(self, switch, state):
         if switch.get_active() == True :
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/blur.sh enable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/blur.sh enable"], shell=True)
         else:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/blur.sh disable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/blur.sh disable"], shell=True)
     pass
     #### Tray Switch ####  
     def on_tray_switch_active_notify(self, switch, state):
         if switch.get_active() == True :
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/tray.sh enable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/tray.sh enable"], shell=True)
         else:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/tray.sh disable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/tray.sh disable"], shell=True)
     pass
     #### workspace Switch ####
     def on_workspace_switch_active_notify(self, switch, state):
         if switch.get_active() == True :
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/workspace.sh enable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/workspace.sh enable"], shell=True)
         else:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/workspace.sh disable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/workspace.sh disable"], shell=True)
     pass
     #### x11 Switch ####
     def on_x11_switch_active_notify(self, switch, state):
         if switch.get_active() == True :
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/x11.sh enable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/x11.sh enable"], shell=True)
         else:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/x11.sh disable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/x11.sh disable"], shell=True)
     pass
     #### clipboard Switch ####
     def on_clipboard_switch_active_notify(self, switch, state):
         if switch.get_active() == True :
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/clipboard.sh enable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/clipboard.sh enable"], shell=True)
         else:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/clipboard.sh disable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/clipboard.sh disable"], shell=True)
     pass
     #### caffeine Switch ####
     def on_caffeine_switch_active_notify(self, switch, state):
         if switch.get_active() == True:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/caffeine.sh enable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/caffeine.sh enable"], shell=True)
         else:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/caffeine.sh disable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/caffeine.sh disable"], shell=True)
     pass
     #### supergfxctl Switch ####
     def on_supergfxctl_switch_active_notify(self, switch, state):
         if switch.get_active() == True:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/supergfxctl.sh enable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/supergfxctl.sh enable"], shell=True)
         else:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/supergfxctl.sh disable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/supergfxctl.sh disable"], shell=True)
     pass
     #### kde Switch ####
     def on_kde_switch_active_notify(self, switch, state):
         if switch.get_active() == True:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/kde.sh enable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/kde.sh enable"], shell=True)
         else:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/kde.sh disable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/kde.sh disable"], shell=True)
     pass
     #### weather Switch ####
     def on_weather_switch_active_notify(self, switch, state):
         if switch.get_active() == True:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/weather.sh enable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/weather.sh enable"], shell=True)
         else:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/weather.sh disable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/weather.sh disable"], shell=True)
     pass
     #### stats Switch ####
     def on_stats_switch_active_notify(self, switch, state):
         if switch.get_active() == True:
-                subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/stats.sh enable"], shell=True)
+                subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/stats.sh enable"], shell=True)
         else:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/stats.sh disable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/stats.sh disable"], shell=True)
     pass
     #### hid Switch ####
     def on_hid_switch_active_notify(self, switch, state):
         if switch.get_active() == True:
-                subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/hid.sh enable"], shell=True)
+                subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/hid.sh enable"], shell=True)
         else:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/hid.sh disable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/hid.sh disable"], shell=True)
     pass
     #### Pop Switch ####
     def on_pop_switch_active_notify(self, switch, state):
         if switch.get_active() == True:
-                subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/pop.sh enable"], shell=True)
+                subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/pop.sh enable"], shell=True)
         else:
-            subprocess.run(["/etc/pika/scripts/pika-layouts/settings-scripts/pop.sh disable"], shell=True)
+            subprocess.run(["/usr/lib/pika/gnome-layouts/settings-scripts/pop.sh disable"], shell=True)
     pass
 
     def on_install_all_pressed(self, widget):
-        subprocess.run(["/etc/pika/scripts/pika-layouts/all.sh"], shell=True)
+        subprocess.run(["/usr/lib/pika/gnome-layouts/all.sh"], shell=True)
     pass
     
 Application()
