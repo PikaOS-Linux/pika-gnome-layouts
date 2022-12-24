@@ -17,7 +17,7 @@ gnome-extensions reset window-list@gnome-shell-extensions.gcampax.github.com || 
 
 # add new settings
 
-dconf write /org/gnome/desktop/wm/preferences/button-layout 'close,minimize,maximize:appmenu'
+dconf write /org/gnome/desktop/wm/preferences/button-layout "'close,minimize,maximize:appmenu'"
 
 dconf write /org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size '48'
 
