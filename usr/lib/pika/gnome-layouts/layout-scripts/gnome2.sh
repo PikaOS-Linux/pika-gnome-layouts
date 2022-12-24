@@ -17,6 +17,8 @@ gnome-extensions reset window-list@gnome-shell-extensions.gcampax.github.com || 
 
 # add new settings
 
+dconf write /org/gnome/desktop/wm/preferences/button-layout 'appmenu:minimize,maximize,close'
+
 dconf write /org/gnome/shell/extensions/arcmenu/menu-hotkey "'Super_L'"
 
 dconf write /org/gnome/shell/extensions/arcmenu/menu-layout "'GnomeMenu'"

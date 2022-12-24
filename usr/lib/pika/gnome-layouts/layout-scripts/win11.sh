@@ -18,6 +18,8 @@ gnome-extensions reset places-menu@gnome-shell-extensions.gcampax.github.com || 
 gnome-extensions reset window-list@gnome-shell-extensions.gcampax.github.com || echo
 
 # add new settings
+dconf write /org/gnome/desktop/wm/preferences/button-layout 'appmenu:minimize,maximize,close'
+
 dconf write /org/gnome/shell/extensions/arcmenu/menu-hotkey "'Super_L'"
 
 dconf write /org/gnome/shell/extensions/arcmenu/force-menu-location "'BottomCentered'"

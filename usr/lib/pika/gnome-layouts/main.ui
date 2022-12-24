@@ -77,6 +77,11 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">False</property>
+                                <property name="tooltip-text" translatable="yes">The good old michealsoft binbows layout:
+* A Bottom taskbar.
+* An Application Menu binded to the "Super Key".
+* Desktop Icons.
+* Full window controls on the right side of the window.</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
                                 <property name="draw-indicator">True</property>
@@ -125,6 +130,12 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">False</property>
+                                <property name="tooltip-text" translatable="yes">The michealsoft binbows layout but newer:
+* A Bottom taskbar with centered icons.
+* A More modern Application Menu binded to the "Super Key".
+* Desktop Icons.
+* Full window controls on the right side of the window.
+* "Activities" button for wasy workspace management.</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
                                 <property name="draw-indicator">True</property>
@@ -173,6 +184,12 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">False</property>
+                                <property name="tooltip-text" translatable="yes">The Ma....... i mean the PearOS layout:
+* A Bottom Dock and a top panel.
+* A Fullscreen Application grid.
+* Desktop Icons.
+* Full window controls on the left side of the window.
+* "Activities" button for wasy workspace management.</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
                                 <property name="draw-indicator">True</property>
@@ -221,6 +238,10 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">False</property>
+                                <property name="tooltip-text" translatable="yes">The Ubuntu Unity Experience:
+* A Leftside Dock and a top panel.
+* Desktop Icons.
+* Full window controls on the left side of the window.</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
                                 <property name="draw-indicator">True</property>
@@ -269,6 +290,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">False</property>
+                                <property name="tooltip-text" translatable="yes">The Old Gnome/Mate Experience.</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
                                 <property name="draw-indicator">True</property>
@@ -317,6 +339,7 @@
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">False</property>
+                                <property name="tooltip-text" translatable="yes">The Stock GNOME Experience.</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
                                 <property name="draw-indicator">True</property>
@@ -341,7 +364,7 @@
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
                             <property name="halign">center</property>
-                            <property name="valign">center</property>
+                            <property name="valign">start</property>
                             <child>
                               <object class="GtkButton" id="blue_accent_button">
                                 <property name="visible">True</property>
@@ -356,7 +379,7 @@
                                     <property name="visible">True</property>
                                     <property name="can-focus">False</property>
                                     <property name="tooltip-text" translatable="yes">Blue</property>
-                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/blue.svg</property>
+                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/blue.svg</property>
                                   </object>
                                 </child>
                               </object>
@@ -380,7 +403,7 @@
                                     <property name="visible">True</property>
                                     <property name="can-focus">False</property>
                                     <property name="tooltip-text" translatable="yes">Green</property>
-                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/green.svg</property>
+                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/green.svg</property>
                                   </object>
                                 </child>
                               </object>
@@ -404,7 +427,7 @@
                                     <property name="visible">True</property>
                                     <property name="can-focus">False</property>
                                     <property name="tooltip-text" translatable="yes">Yellow</property>
-                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/yellow.svg</property>
+                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/yellow.svg</property>
                                   </object>
                                 </child>
                               </object>
@@ -428,7 +451,7 @@
                                     <property name="visible">True</property>
                                     <property name="can-focus">False</property>
                                     <property name="tooltip-text" translatable="yes">Orange</property>
-                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/orange.svg</property>
+                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/orange.svg</property>
                                   </object>
                                 </child>
                               </object>
@@ -452,7 +475,7 @@
                                     <property name="visible">True</property>
                                     <property name="can-focus">False</property>
                                     <property name="tooltip-text" translatable="yes">Red</property>
-                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/red.svg</property>
+                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/red.svg</property>
                                   </object>
                                 </child>
                               </object>
@@ -476,7 +499,7 @@
                                     <property name="visible">True</property>
                                     <property name="can-focus">False</property>
                                     <property name="tooltip-text" translatable="yes">Magenta</property>
-                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/magenta.svg</property>
+                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/magenta.svg</property>
                                   </object>
                                 </child>
                               </object>
@@ -500,7 +523,7 @@
                                     <property name="visible">True</property>
                                     <property name="can-focus">False</property>
                                     <property name="tooltip-text" translatable="yes">Purple</property>
-                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/purple.svg</property>
+                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/purple.svg</property>
                                   </object>
                                 </child>
                               </object>
@@ -524,7 +547,7 @@
                                     <property name="visible">True</property>
                                     <property name="can-focus">False</property>
                                     <property name="tooltip-text" translatable="yes">Brown (please don't use this)</property>
-                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/brown.svg</property>
+                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/brown.svg</property>
                                   </object>
                                 </child>
                               </object>
@@ -548,7 +571,7 @@
                                     <property name="visible">True</property>
                                     <property name="can-focus">False</property>
                                     <property name="tooltip-text" translatable="yes">Gray</property>
-                                    <property name="pixbuf">../../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/gray.svg</property>
+                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/gray.svg</property>
                                   </object>
                                 </child>
                               </object>
