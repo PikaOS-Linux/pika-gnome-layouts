@@ -7,5 +7,12 @@
         What layout is selected.
       </description>
     </key>
+    <key type="i" name="pika-theme">
+      <default>1</default>
+      <summary>What Theme is being used.</summary>
+      <description>
+        What Theme is being used.
+      </description>
+    </key>
   </schema>
 </schemalist>

@@ -18,5 +18,6 @@ Depends: pika-welcome,
 	gnome-shell-extension-dash-to-panel,
 	gnome-shell-extension-ubuntu-dock,
 	gnome-shell-extension-desktop-icons-ng,
+	gnome-shell-extension-appindicator,
 	dconf-cli
 Description: PikaOS Gnome Desktop Layouts Selector

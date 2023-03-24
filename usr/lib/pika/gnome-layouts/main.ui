@@ -39,31 +39,57 @@
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
                     <child>
-                      <!-- n-columns=3 n-rows=3 -->
-                      <object class="GtkGrid" id="layouts_grid">
+                      <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="row-spacing">10</property>
-                        <property name="column-spacing">10</property>
-                        <property name="row-homogeneous">True</property>
-                        <property name="column-homogeneous">True</property>
+                        <property name="orientation">vertical</property>
                         <child>
-                          <object class="GtkBox" id="win10_box">
+                          <object class="GtkBox" id="theme_box">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="orientation">vertical</property>
-                            <property name="spacing">2</property>
+                            <property name="halign">center</property>
+                            <property name="valign">start</property>
+                            <property name="spacing">128</property>
                             <child>
-                              <object class="GtkImage" id="win10_preview">
+                              <object class="GtkButton" id="pika_theme_button">
                                 <property name="visible">True</property>
-                                <property name="can-focus">False</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="margin-start">10</property>
-                                <property name="margin-end">10</property>
-                                <property name="margin-top">10</property>
-                                <property name="margin-bottom">10</property>
-                                <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/win10.svg</property>
+                                <signal name="pressed" handler="on_pika_theme_button_pressed" swapped="no"/>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkImage">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="pixel-size">36</property>
+                                        <property name="icon-name">pika-logo</property>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">0</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="label" translatable="yes">PikaOS Themeing</property>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">1</property>
+                                      </packing>
+                                    </child>
+                                  </object>
+                                </child>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -72,520 +98,624 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkRadioButton" id="win10_button">
-                                <property name="label" translatable="yes">Traditional</property>
+                              <object class="GtkButton" id="gnome_theme_button">
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="tooltip-text" translatable="yes">The good old michealsoft binbows layout:
-* A Bottom taskbar.
-* An Application Menu binded to the "Super Key".
-* Desktop Icons.
-* Full window controls on the right side of the window.</property>
+                                <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
-                                <property name="draw-indicator">True</property>
-                                <property name="group">radiobutton1</property>
-                                <signal name="pressed" handler="on_win10_button_pressed" swapped="no"/>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkImage">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="pixel-size">36</property>
+                                        <property name="icon-name">gnome-foot</property>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">0</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="label" translatable="yes">Gnome Themeing</property>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">1</property>
+                                      </packing>
+                                    </child>
+                                  </object>
+                                </child>
                               </object>
                               <packing>
-                                <property name="expand">True</property>
+                                <property name="expand">False</property>
                                 <property name="fill">True</property>
                                 <property name="position">1</property>
                               </packing>
                             </child>
                           </object>
                           <packing>
-                            <property name="left-attach">0</property>
-                            <property name="top-attach">0</property>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkBox" id="win11_box">
+                          <!-- n-columns=3 n-rows=3 -->
+                          <object class="GtkGrid" id="layouts_grid">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="orientation">vertical</property>
-                            <property name="spacing">2</property>
+                            <property name="row-spacing">10</property>
+                            <property name="column-spacing">10</property>
+                            <property name="column-homogeneous">True</property>
                             <child>
-                              <object class="GtkImage" id="win11_preview">
+                              <object class="GtkBox" id="win10_box">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="margin-start">10</property>
-                                <property name="margin-end">10</property>
-                                <property name="margin-top">10</property>
-                                <property name="margin-bottom">10</property>
-                                <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/win11.svg</property>
+                                <property name="orientation">vertical</property>
+                                <property name="spacing">2</property>
+                                <child>
+                                  <object class="GtkImage" id="win10_preview">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="margin-left">10</property>
+                                    <property name="margin-right">10</property>
+                                    <property name="margin-start">10</property>
+                                    <property name="margin-end">10</property>
+                                    <property name="margin-top">10</property>
+                                    <property name="margin-bottom">10</property>
+                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/win10.svg</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkRadioButton" id="win10_button">
+                                    <property name="label" translatable="yes">Traditional</property>
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">False</property>
+                                    <property name="tooltip-text" translatable="yes">The good old michealsoft binbows layout:
+* A Bottom taskbar.
+* An Application Menu binded to the "Super Key".
+* Desktop Icons.
+* Full window controls on the right side of the window.</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="draw-indicator">True</property>
+                                    <property name="group">radiobutton1</property>
+                                    <signal name="pressed" handler="on_win10_button_pressed" swapped="no"/>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
                               </object>
                               <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
+                                <property name="left-attach">0</property>
+                                <property name="top-attach">0</property>
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkRadioButton" id="win11_button">
-                                <property name="label" translatable="yes">Eleven</property>
+                              <object class="GtkBox" id="win11_box">
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="tooltip-text" translatable="yes">The michealsoft binbows layout but newer:
+                                <property name="can-focus">False</property>
+                                <property name="orientation">vertical</property>
+                                <property name="spacing">2</property>
+                                <child>
+                                  <object class="GtkImage" id="win11_preview">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="margin-left">10</property>
+                                    <property name="margin-right">10</property>
+                                    <property name="margin-start">10</property>
+                                    <property name="margin-end">10</property>
+                                    <property name="margin-top">10</property>
+                                    <property name="margin-bottom">10</property>
+                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/win11.svg</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkRadioButton" id="win11_button">
+                                    <property name="label" translatable="yes">Eleven</property>
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">False</property>
+                                    <property name="tooltip-text" translatable="yes">The michealsoft binbows layout but newer:
 * A Bottom taskbar with centered icons.
 * A More modern Application Menu binded to the "Super Key".
 * Desktop Icons.
 * Full window controls on the right side of the window.
 * "Activities" button for wasy workspace management.</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="draw-indicator">True</property>
-                                <property name="group">radiobutton1</property>
-                                <signal name="pressed" handler="on_win11_button_pressed" swapped="no"/>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="draw-indicator">True</property>
+                                    <property name="group">radiobutton1</property>
+                                    <signal name="pressed" handler="on_win11_button_pressed" swapped="no"/>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
                               </object>
                               <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
+                                <property name="left-attach">1</property>
+                                <property name="top-attach">0</property>
                               </packing>
                             </child>
-                          </object>
-                          <packing>
-                            <property name="left-attach">1</property>
-                            <property name="top-attach">0</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkBox" id="macos_box">
-                            <property name="visible">True</property>
-                            <property name="can-focus">False</property>
-                            <property name="orientation">vertical</property>
-                            <property name="spacing">2</property>
                             <child>
-                              <object class="GtkImage" id="macos_preview">
+                              <object class="GtkBox" id="macos_box">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="margin-start">10</property>
-                                <property name="margin-end">10</property>
-                                <property name="margin-top">10</property>
-                                <property name="margin-bottom">10</property>
-                                <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/macos.svg</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkRadioButton" id="macos_button">
-                                <property name="label" translatable="yes">Pineapple</property>
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="tooltip-text" translatable="yes">The Ma....... i mean the PearOS layout:
+                                <property name="orientation">vertical</property>
+                                <property name="spacing">2</property>
+                                <child>
+                                  <object class="GtkImage" id="macos_preview">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="margin-left">10</property>
+                                    <property name="margin-right">10</property>
+                                    <property name="margin-start">10</property>
+                                    <property name="margin-end">10</property>
+                                    <property name="margin-top">10</property>
+                                    <property name="margin-bottom">10</property>
+                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/macos.svg</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkRadioButton" id="macos_button">
+                                    <property name="label" translatable="yes">Pineapple</property>
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">False</property>
+                                    <property name="tooltip-text" translatable="yes">The Ma....... i mean the PearOS layout:
 * A Bottom Dock and a top panel.
 * A Fullscreen Application grid.
 * Desktop Icons.
 * Full window controls on the left side of the window.
 * "Activities" button for wasy workspace management.</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="draw-indicator">True</property>
-                                <property name="group">radiobutton1</property>
-                                <signal name="pressed" handler="on_macos_button_pressed" swapped="no"/>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="draw-indicator">True</property>
+                                    <property name="group">radiobutton1</property>
+                                    <signal name="pressed" handler="on_macos_button_pressed" swapped="no"/>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
                               </object>
                               <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
+                                <property name="left-attach">2</property>
+                                <property name="top-attach">0</property>
                               </packing>
                             </child>
-                          </object>
-                          <packing>
-                            <property name="left-attach">2</property>
-                            <property name="top-attach">0</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkBox" id="unity_box">
-                            <property name="visible">True</property>
-                            <property name="can-focus">False</property>
-                            <property name="orientation">vertical</property>
-                            <property name="spacing">2</property>
                             <child>
-                              <object class="GtkImage" id="unity_preview">
+                              <object class="GtkBox" id="unity_box">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="margin-start">10</property>
-                                <property name="margin-end">10</property>
-                                <property name="margin-top">10</property>
-                                <property name="margin-bottom">10</property>
-                                <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/unity.svg</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkRadioButton" id="unity_button">
-                                <property name="label" translatable="yes">Unity</property>
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="tooltip-text" translatable="yes">The Ubuntu Unity Experience:
+                                <property name="orientation">vertical</property>
+                                <property name="spacing">2</property>
+                                <child>
+                                  <object class="GtkImage" id="unity_preview">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="margin-left">10</property>
+                                    <property name="margin-right">10</property>
+                                    <property name="margin-start">10</property>
+                                    <property name="margin-end">10</property>
+                                    <property name="margin-top">10</property>
+                                    <property name="margin-bottom">10</property>
+                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/unity.svg</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkRadioButton" id="unity_button">
+                                    <property name="label" translatable="yes">Unity</property>
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">False</property>
+                                    <property name="tooltip-text" translatable="yes">The Ubuntu Unity Experience:
 * A Leftside Dock and a top panel.
 * Desktop Icons.
 * Full window controls on the left side of the window.</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="draw-indicator">True</property>
-                                <property name="group">radiobutton1</property>
-                                <signal name="pressed" handler="on_unity_button_pressed" swapped="no"/>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="draw-indicator">True</property>
+                                    <property name="group">radiobutton1</property>
+                                    <signal name="pressed" handler="on_unity_button_pressed" swapped="no"/>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
                               </object>
                               <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
+                                <property name="left-attach">2</property>
+                                <property name="top-attach">1</property>
                               </packing>
                             </child>
-                          </object>
-                          <packing>
-                            <property name="left-attach">2</property>
-                            <property name="top-attach">1</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkBox" id="gnome2_box">
-                            <property name="visible">True</property>
-                            <property name="can-focus">False</property>
-                            <property name="orientation">vertical</property>
-                            <property name="spacing">2</property>
                             <child>
-                              <object class="GtkImage" id="gnome2_preview">
+                              <object class="GtkBox" id="gnome2_box">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="orientation">vertical</property>
+                                <property name="spacing">2</property>
+                                <child>
+                                  <object class="GtkImage" id="gnome2_preview">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="margin-left">10</property>
+                                    <property name="margin-right">10</property>
+                                    <property name="margin-start">10</property>
+                                    <property name="margin-end">10</property>
+                                    <property name="margin-top">10</property>
+                                    <property name="margin-bottom">10</property>
+                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/gnome2.svg</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkRadioButton" id="gnome2_button">
+                                    <property name="label" translatable="yes">GNOME 2</property>
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">False</property>
+                                    <property name="tooltip-text" translatable="yes">The Old Gnome/Mate Experience.</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="draw-indicator">True</property>
+                                    <property name="group">radiobutton1</property>
+                                    <signal name="pressed" handler="on_gnome2_button_pressed" swapped="no"/>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="left-attach">1</property>
+                                <property name="top-attach">1</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkBox" id="gnome_box">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="orientation">vertical</property>
+                                <property name="spacing">2</property>
+                                <child>
+                                  <object class="GtkImage" id="gnome_preview">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="margin-left">10</property>
+                                    <property name="margin-right">10</property>
+                                    <property name="margin-start">10</property>
+                                    <property name="margin-end">10</property>
+                                    <property name="margin-top">10</property>
+                                    <property name="margin-bottom">10</property>
+                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/gnome.svg</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkRadioButton" id="gnome_button">
+                                    <property name="label" translatable="yes">GNOME</property>
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">False</property>
+                                    <property name="tooltip-text" translatable="yes">The Stock GNOME Experience.</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="draw-indicator">True</property>
+                                    <property name="group">radiobutton1</property>
+                                    <signal name="pressed" handler="on_gnome_button_pressed" swapped="no"/>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="left-attach">0</property>
+                                <property name="top-attach">1</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkBox" id="accent_box">
+                                <property name="name">accent_box</property>
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
                                 <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="margin-start">10</property>
-                                <property name="margin-end">10</property>
-                                <property name="margin-top">10</property>
-                                <property name="margin-bottom">10</property>
-                                <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/gnome2.svg</property>
+                                <property name="valign">start</property>
+                                <child>
+                                  <object class="GtkButton" id="blue_accent_button">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">True</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="relief">none</property>
+                                    <signal name="pressed" handler="blue_accent_button_pressed_cb" swapped="no"/>
+                                    <child>
+                                      <object class="GtkImage" id="blue_accent_image">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="tooltip-text" translatable="yes">Blue</property>
+                                        <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/blue.svg</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="green_accent_button">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">True</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="relief">none</property>
+                                    <signal name="pressed" handler="green_accent_button_pressed_cb" swapped="no"/>
+                                    <child>
+                                      <object class="GtkImage" id="green_accent_image">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="tooltip-text" translatable="yes">Green</property>
+                                        <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/green.svg</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="yellow_accent_button">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">True</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="relief">none</property>
+                                    <signal name="pressed" handler="yellow_accent_button_pressed_cb" swapped="no"/>
+                                    <child>
+                                      <object class="GtkImage" id="yellow_accent_image">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="tooltip-text" translatable="yes">Yellow</property>
+                                        <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/yellow.svg</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">2</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="orange_accent_button">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">True</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="relief">none</property>
+                                    <signal name="pressed" handler="orange_accent_button_pressed_cb" swapped="no"/>
+                                    <child>
+                                      <object class="GtkImage" id="orange_accent_image">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="tooltip-text" translatable="yes">Orange</property>
+                                        <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/orange.svg</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">3</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="red_accent_button">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">True</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="relief">none</property>
+                                    <signal name="pressed" handler="red_accent_button_pressed_cb" swapped="no"/>
+                                    <child>
+                                      <object class="GtkImage" id="red_accent_image">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="tooltip-text" translatable="yes">Red</property>
+                                        <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/red.svg</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">4</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="pink_accent_button">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">True</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="relief">none</property>
+                                    <signal name="pressed" handler="magenta_accent_button_pressed_cb" swapped="no"/>
+                                    <child>
+                                      <object class="GtkImage" id="pink_accent_image">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="tooltip-text" translatable="yes">Pink</property>
+                                        <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/pink.svg</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">5</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="purple_accent_button">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">True</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="relief">none</property>
+                                    <signal name="pressed" handler="purple_accent_button_pressed_cb" swapped="no"/>
+                                    <child>
+                                      <object class="GtkImage" id="purple_accent_image">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="tooltip-text" translatable="yes">Purple</property>
+                                        <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/purple.svg</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">6</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="teal_accent_button">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">True</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="relief">none</property>
+                                    <signal name="pressed" handler="brown_accent_button_pressed_cb" swapped="no"/>
+                                    <child>
+                                      <object class="GtkImage" id="teal_accent_image">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="tooltip-text" translatable="yes">Teal</property>
+                                        <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/teal.svg</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">7</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="gray_accent_button">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="receives-default">True</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="relief">none</property>
+                                    <signal name="pressed" handler="gray_accent_button_pressed_cb" swapped="no"/>
+                                    <child>
+                                      <object class="GtkImage" id="gray_accent_image">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="tooltip-text" translatable="yes">Gray</property>
+                                        <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/gray.svg</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">8</property>
+                                  </packing>
+                                </child>
                               </object>
                               <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkRadioButton" id="gnome2_button">
-                                <property name="label" translatable="yes">GNOME 2</property>
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="tooltip-text" translatable="yes">The Old Gnome/Mate Experience.</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="draw-indicator">True</property>
-                                <property name="group">radiobutton1</property>
-                                <signal name="pressed" handler="on_gnome2_button_pressed" swapped="no"/>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
+                                <property name="left-attach">0</property>
+                                <property name="top-attach">2</property>
+                                <property name="width">3</property>
                               </packing>
                             </child>
                           </object>
                           <packing>
-                            <property name="left-attach">1</property>
-                            <property name="top-attach">1</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkBox" id="gnome_box">
-                            <property name="visible">True</property>
-                            <property name="can-focus">False</property>
-                            <property name="orientation">vertical</property>
-                            <property name="spacing">2</property>
-                            <child>
-                              <object class="GtkImage" id="gnome_preview">
-                                <property name="visible">True</property>
-                                <property name="can-focus">False</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="margin-start">10</property>
-                                <property name="margin-end">10</property>
-                                <property name="margin-top">10</property>
-                                <property name="margin-bottom">10</property>
-                                <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/previews/gnome.svg</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkRadioButton" id="gnome_button">
-                                <property name="label" translatable="yes">GNOME</property>
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="tooltip-text" translatable="yes">The Stock GNOME Experience.</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="draw-indicator">True</property>
-                                <property name="group">radiobutton1</property>
-                                <signal name="pressed" handler="on_gnome_button_pressed" swapped="no"/>
-                              </object>
-                              <packing>
-                                <property name="expand">True</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="left-attach">0</property>
-                            <property name="top-attach">1</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkBox" id="accent_box">
-                            <property name="name">accent_box</property>
-                            <property name="visible">True</property>
-                            <property name="can-focus">False</property>
-                            <property name="halign">center</property>
-                            <property name="valign">start</property>
-                            <child>
-                              <object class="GtkButton" id="blue_accent_button">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">True</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="relief">none</property>
-                                <signal name="pressed" handler="blue_accent_button_pressed_cb" swapped="no"/>
-                                <child>
-                                  <object class="GtkImage" id="blue_accent_image">
-                                    <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
-                                    <property name="tooltip-text" translatable="yes">Blue</property>
-                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/blue.svg</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="green_accent_button">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">True</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="relief">none</property>
-                                <signal name="pressed" handler="green_accent_button_pressed_cb" swapped="no"/>
-                                <child>
-                                  <object class="GtkImage" id="green_accent_image">
-                                    <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
-                                    <property name="tooltip-text" translatable="yes">Green</property>
-                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/green.svg</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="yellow_accent_button">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">True</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="relief">none</property>
-                                <signal name="pressed" handler="yellow_accent_button_pressed_cb" swapped="no"/>
-                                <child>
-                                  <object class="GtkImage" id="yellow_accent_image">
-                                    <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
-                                    <property name="tooltip-text" translatable="yes">Yellow</property>
-                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/yellow.svg</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">2</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="orange_accent_button">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">True</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="relief">none</property>
-                                <signal name="pressed" handler="orange_accent_button_pressed_cb" swapped="no"/>
-                                <child>
-                                  <object class="GtkImage" id="orange_accent_image">
-                                    <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
-                                    <property name="tooltip-text" translatable="yes">Orange</property>
-                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/orange.svg</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">3</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="red_accent_button">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">True</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="relief">none</property>
-                                <signal name="pressed" handler="red_accent_button_pressed_cb" swapped="no"/>
-                                <child>
-                                  <object class="GtkImage" id="red_accent_image">
-                                    <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
-                                    <property name="tooltip-text" translatable="yes">Red</property>
-                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/red.svg</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">4</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="magenta_accent_button">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">True</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="relief">none</property>
-                                <signal name="pressed" handler="magenta_accent_button_pressed_cb" swapped="no"/>
-                                <child>
-                                  <object class="GtkImage" id="magenta_accent_image">
-                                    <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
-                                    <property name="tooltip-text" translatable="yes">Magenta</property>
-                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/magenta.svg</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">5</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="purple_accent_button">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">True</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="relief">none</property>
-                                <signal name="pressed" handler="purple_accent_button_pressed_cb" swapped="no"/>
-                                <child>
-                                  <object class="GtkImage" id="purple_accent_image">
-                                    <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
-                                    <property name="tooltip-text" translatable="yes">Purple</property>
-                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/purple.svg</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">6</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="brown_accent_button">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">True</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="relief">none</property>
-                                <signal name="pressed" handler="brown_accent_button_pressed_cb" swapped="no"/>
-                                <child>
-                                  <object class="GtkImage" id="brown_accent_image">
-                                    <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
-                                    <property name="tooltip-text" translatable="yes">Brown (please don't use this)</property>
-                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/brown.svg</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">7</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="gray_accent_button">
-                                <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">True</property>
-                                <property name="halign">center</property>
-                                <property name="valign">center</property>
-                                <property name="relief">none</property>
-                                <signal name="pressed" handler="gray_accent_button_pressed_cb" swapped="no"/>
-                                <child>
-                                  <object class="GtkImage" id="gray_accent_image">
-                                    <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
-                                    <property name="tooltip-text" translatable="yes">Gray</property>
-                                    <property name="pixbuf">../../../../../../../../../usr/lib/pika/gnome-layouts/accent-colors/gray.svg</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">8</property>
-                              </packing>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="left-attach">0</property>
-                            <property name="top-attach">2</property>
-                            <property name="width">3</property>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
                           </packing>
                         </child>
                       </object>

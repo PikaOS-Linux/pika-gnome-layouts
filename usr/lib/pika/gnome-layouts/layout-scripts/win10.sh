@@ -8,7 +8,7 @@ dconf reset -f /org/gnome/shell/extensions/dash-to-dock/ || echo
 dconf reset -f /org/gnome/shell/extensions/dash-to-panel/ || echo
 dconf reset -f /org/gnome/shell/extensions/just-perfection/ || echo
 gnome-extensions reset arcmenu@arcmenu.com || echo
-gnome-extensions reset ubuntu-dock@ubuntu.com || echo
+gnome-extensions reset pika-dock@ubuntu.com || echo
 gnome-extensions reset dash-to-panel@jderose9.github.com || echo
 gnome-extensions reset just-perfection-desktop@just-perfection || echo
 gnome-extensions reset launch-new-instance@gnome-shell-extensions.gcampax.github.com || echo
