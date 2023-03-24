@@ -104,6 +104,7 @@
                                 <property name="receives-default">True</property>
                                 <property name="halign">center</property>
                                 <property name="valign">center</property>
+                                <signal name="pressed" handler="on_gnome_theme_button_pressed" swapped="no"/>
                                 <child>
                                   <object class="GtkBox">
                                     <property name="visible">True</property>

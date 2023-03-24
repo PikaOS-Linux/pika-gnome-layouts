@@ -36,9 +36,9 @@ class Application:
         
         accent_box = self.builder.get_object("accent_box")
         
-        theme_output = subprocess.run(["dconf read /org/pika/layouts/pika-theme | grep 1"], shell=True)
+        accent_output = subprocess.run(["dconf read /org/pika/layouts/pika-theme | grep 1"], shell=True)
         
-        if (theme_output.returncode) != 0:
+        if (accent_output.returncode) != 0:
             accent_box.hide()
         
         ### Extension refresh ###
@@ -153,9 +153,11 @@ class Application:
         
         ### Themes
     def on_pika_theme_button_pressed(self, widget):
+        accent_box = self.builder.get_object("accent_box")
         subprocess.run(["/usr/lib/pika/gnome-layouts/theme.sh pika"], shell=True)
         accent_box.show()
     def on_gnome_theme_button_pressed(self, widget):
+        accent_box = self.builder.get_object("accent_box")
         subprocess.run(["/usr/lib/pika/gnome-layouts/theme.sh gnome"], shell=True)
         accent_box.hide()
         
