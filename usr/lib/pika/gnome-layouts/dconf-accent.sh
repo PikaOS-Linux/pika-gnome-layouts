@@ -9,7 +9,7 @@ dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/enable
 dconf write /org/pika/layouts/pika-theme 1
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/enabled true
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/sunrise "'/usr/lib/pika/gnome-layouts/libadwaita.sh'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/sunset "'/usr/lib/pika/gnome-layouts/libadwaita.sh'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/sunset "'/usr/lib/pika/gnome-layouts/libadwaita.sh dark'"
 if [[ $1 == Blue ]]
 then
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/day "'Orchis-Light'"

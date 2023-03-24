@@ -18,7 +18,7 @@ dconf write /org/gnome/desktop/interface/document-font-name "'Roboto Slab 11'"
 dconf write /org/gnome/desktop/interface/font-name "'Fira Sans Semi-Light 10'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/enabled true
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/sunrise "'/usr/lib/pika/gnome-layouts/libadwaita.sh'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/sunset "'/usr/lib/pika/gnome-layouts/libadwaita.sh'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/sunset "'/usr/lib/pika/gnome-layouts/libadwaita.sh dark'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/day "'Orchis-Yellow-Light'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/night "'Orchis-Yellow-Dark'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/day "'Orchis-Yellow-Light'"
