@@ -22,3 +22,4 @@ dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/night "'
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/day "'Orchis-$1-Light'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/night "'Orchis-$1-Dark'"
 fi
+/usr/lib/pika/gnome-layouts/libadwaita.sh
