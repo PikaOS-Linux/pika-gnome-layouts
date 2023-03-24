@@ -23,6 +23,7 @@ dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/day "'Or
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/night "'Orchis-Yellow-Dark'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/day "'Orchis-Yellow-Light'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/night "'Orchis-Yellow-Dark'"
+pkexec /usr/lib/pika/gnome-layouts/papirus-folders -u -C yellow
 fi
 if [[ $1 == gnome ]]
 then
