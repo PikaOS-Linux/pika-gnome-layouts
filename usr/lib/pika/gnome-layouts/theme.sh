@@ -10,11 +10,8 @@ dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/enable
 if [[ $1 == pika ]]
 then
 dconf write /org/pika/layouts/pika-theme 1
-dconf write /org/gnome/shell/extensions/user-theme/name "'Orchis-Yellow'"
-dconf write /org/gnome/desktop/wm/preferences/theme "'Orchis-Yellow'"
 dconf write /org/gnome/desktop/wm/preferences/titlebar-font "'Fira Sans Semi-Bold 10'"
 dconf write /org/gnome/desktop/sound/theme-name "'pika'"
-dconf write /org/gnome/desktop/interface/gtk-theme "'Orchis-Yellow'"
 dconf write /org/gnome/desktop/interface/icon-theme "'Papirus'"
 dconf write /org/gnome/desktop/interface/monospace-font-name "'Fira Mono 11'"
 dconf write /org/gnome/desktop/interface/document-font-name "'Roboto Slab 11'"
@@ -31,10 +28,8 @@ if [[ $1 == gnome ]]
 then
 dconf write /org/pika/layouts/pika-theme 0
 dconf write /org/gnome/shell/extensions/user-theme/name "''"
-dconf write /org/gnome/desktop/wm/preferences/theme "'adw-gtk3'"
 dconf write /org/gnome/desktop/wm/preferences/titlebar-font "'Cantarell Bold 11'"
 dconf write /org/gnome/desktop/sound/theme-name "'freedesktop'"
-dconf write /org/gnome/desktop/interface/gtk-theme "'adw-gtk3'"
 dconf write /org/gnome/desktop/interface/icon-theme "'Adwaita'"
 dconf write /org/gnome/desktop/interface/monospace-font-name "'Monospace 11'"
 dconf write /org/gnome/desktop/interface/document-font-name "'Sans 11'"
