@@ -152,12 +152,12 @@ class Application:
         
         
         ### Themes
-        def on_pika_theme_button_pressed(self, widget):
-            subprocess.run(["/usr/lib/pika/gnome-layouts/theme.sh pika"], shell=True)
-            accent_box.show()
-        def on_gnome_theme_button_pressed(self, widget):
-            subprocess.run(["/usr/lib/pika/gnome-layouts/theme.sh gnome"], shell=True)
-            accent_box.hide()
+    def on_pika_theme_button_pressed(self, widget):
+        subprocess.run(["/usr/lib/pika/gnome-layouts/theme.sh pika"], shell=True)
+        accent_box.show()
+    def on_gnome_theme_button_pressed(self, widget):
+        subprocess.run(["/usr/lib/pika/gnome-layouts/theme.sh gnome"], shell=True)
+        accent_box.hide()
         
         
         if settings.get_int("layout-num") == 1:
