@@ -1,12 +1,24 @@
 #! /usr/bin/bash
-# Enable extensions
-gnome-extensions enable custom-accent-colors@demiskp
-gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
-# Set accent color settings
-dconf write /org/gnome/shell/extensions/custom-accent-colors/accent-color "'"$1"'"
-dconf write /org/gnome/shell/extensions/custom-accent-colors/theme-flatpak true
-dconf write /org/gnome/shell/extensions/custom-accent-colors/theme-gtk3 true
-dconf write /org/gnome/shell/extensions/custom-accent-colors/theme-shell true
-# Refresh Shell
-dconf write /org/gnome/shell/extensions/user-theme/name "''"
-dconf write /org/gnome/shell/extensions/user-theme/name "'CustomAccentColors'"
+gnome-extensions enable pika-darkmode@pika.com
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/manual-time-source true
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/ondemand-button-placement "'none'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/ondemand-time "'night'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/time-source "'ondemand'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/enabled true
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/enabled true
+dconf write /org/pika/layouts/pika-theme 1
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/enabled true
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/sunrise "'/usr/lib/pika/gnome-layouts/libadwaita.sh'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/sunset "'/usr/lib/pika/gnome-layouts/libadwaita.sh'"
+if [[ $1 == Blue ]]
+then
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/day "'Orchis-Light'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/night "'Orchis-Dark'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/day "'Orchis-Light'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/night "'Orchis-Dark'"
+else
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/day "'Orchis-$1-Light'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/night "'Orchis-$1-Dark'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/day "'Orchis-$1-Light'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/night "'Orchis-$1-Dark'"
+fi
