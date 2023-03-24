@@ -34,12 +34,12 @@ class Application:
         
         subprocess.run(["gsettings set org.gnome.shell disable-user-extensions false"], shell=True, stdout=subprocess.DEVNULL)
         
-        theme_box = self.builder.get_object("theme_box")
+        accent_box = self.builder.get_object("accent_box")
         
         theme_output = subprocess.run(["dconf read /org/pika/layouts/pika-theme | grep 1"], shell=True)
         
         if (theme_output.returncode) != 0:
-            theme_box.hide()
+            accent_box.hide()
         
         ### Extension refresh ###
         
