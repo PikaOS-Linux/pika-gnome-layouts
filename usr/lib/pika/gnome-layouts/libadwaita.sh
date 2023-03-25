@@ -13,14 +13,15 @@ if echo $THEME | grep -i orchis
     fi
 else
     if [ -f  $HOME/.config/pika_theme ]
+    . "$HOME/.config/pika_theme"
     then
         if [[ $1 = dark ]]
         then
-            kvantummanager --set $(cat $HOME/.config/pika_theme | grep 'KVANTUM_THEME_DARK=' | head -n1 | sed "s#KVANTUM_THEME_DARK=##")
-            cp -rfv $(cat $HOME/.config/pika_theme | grep 'GTK_THEME_PATH_DARK=' | head -n1 | sed "s#GTK_THEME_PATH_DARK=##")/gtk-4.0 $HOME/.config/
+            kvantummanager --set $KVANTUM_THEME_DARK
+            cp -rfv $GTK_THEME_PATH_DARK/gtk-4.0 $HOME/.config/
         else
-            kvantummanager --set $(cat $HOME/.config/pika_theme | grep 'KVANTUM_THEME_LIGHT=' | head -n1 | sed "s#KVANTUM_THEME_LIGHT=##")
-            cp -rfv $(cat $HOME/.config/pika_theme | grep 'GTK_THEME_PATH_LIGHT=' | head -n1 | sed "s#GTK_THEME_PATH_LIGHT=##")/gtk-4.0 $HOME/.config/
+            kvantummanager --set $KVANTUM_THEME_LIGHT
+            cp -rfv $GTK_THEME_PATH_LIGHT/gtk-4.0 $HOME/.config/
         fi
     fi
 fi
