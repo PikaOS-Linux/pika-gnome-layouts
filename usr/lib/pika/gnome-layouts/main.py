@@ -245,10 +245,10 @@ class Application:
         subprocess.run(["echo 'theme change done!'"], shell=True)
     def teal_accent_button_pressed_cb (self, widget):
         subprocess.run(["/usr/lib/pika/gnome-layouts/dconf-accent.sh Teal"], shell=True)
-        subprocess.run(["pkexec /usr/lib/pika/gnome-layouts/-u -C teal"], shell=True)
+        subprocess.run(["pkexec /usr/lib/pika/gnome-layouts/papirus-folders -u -C teal"], shell=True)
         subprocess.run(["echo 'theme change done!'"], shell=True)
     def gray_accent_button_pressed_cb (self, widget):
-        subprocess.run(["/usr/lib/pika/gnome-layouts/dconf-accent.sh Gray"], shell=True)
+        subprocess.run(["/usr/lib/pika/gnome-layouts/dconf-accent.sh Grey"], shell=True)
         subprocess.run(["pkexec /usr/lib/pika/gnome-layouts/papirus-folders -u -C grey"], shell=True)
         subprocess.run(["echo 'theme change done!'"], shell=True)
     

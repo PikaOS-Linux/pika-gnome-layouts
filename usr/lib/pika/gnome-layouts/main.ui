@@ -617,7 +617,7 @@
                                     <property name="halign">center</property>
                                     <property name="valign">center</property>
                                     <property name="relief">none</property>
-                                    <signal name="pressed" handler="magenta_accent_button_pressed_cb" swapped="no"/>
+                                    <signal name="pressed" handler="pink_accent_button_pressed_cb" swapped="no"/>
                                     <child>
                                       <object class="GtkImage" id="pink_accent_image">
                                         <property name="visible">True</property>
@@ -665,7 +665,7 @@
                                     <property name="halign">center</property>
                                     <property name="valign">center</property>
                                     <property name="relief">none</property>
-                                    <signal name="pressed" handler="brown_accent_button_pressed_cb" swapped="no"/>
+                                    <signal name="pressed" handler="teal_accent_button_pressed_cb" swapped="no"/>
                                     <child>
                                       <object class="GtkImage" id="teal_accent_image">
                                         <property name="visible">True</property>
