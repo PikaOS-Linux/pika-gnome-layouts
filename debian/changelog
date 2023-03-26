@@ -1,6 +1,6 @@
-pika-gnome-layouts (2.0-99pika3) kinetic; urgency=low
+pika-gnome-layouts (2.0-99pika4) kinetic; urgency=low
 
-  * Fix Windows 11 layout
+  * Redo Themeing system
 
  -- Ward Nakchbandi <hotrod.master@hotmail.com>  Sat, 01 Oct 2022 14:50:00 +0200
 
