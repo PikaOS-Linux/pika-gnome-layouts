@@ -23,7 +23,19 @@ dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/day "'Or
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/night "'Orchis-Yellow-Dark'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/day "'Orchis-Yellow-Light'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/night "'Orchis-Yellow-Dark'"
-pkexec /usr/lib/pika/gnome-layouts/papirus-folders -u -C yellow
+echo '#! /bin/bash' > $HOME/.config/pika_theme || touch $HOME/.config/pika_theme && echo '#! /bin/bash' > $HOME/.config/pika_theme
+echo 'KVANTUM_THEME_DARK=Orchis-dark' >> $HOME/.config/pika_theme
+echo 'KVANTUM_THEME_LIGHT=Orchis' >> $HOME/.config/pika_theme
+echo 'GTK_THEME_PATH_DARK=/usr/share/themes/$(dconf read /org/gnome/desktop/interface/gtk-theme | 'sed \"s+\'++\"' | 'sed \"s+\'++\"' | 'sed \"s+-Dark++\"' | 'sed \"s+-Light++\"')'-Dark >> $HOME/.config/pika_theme
+echo 'GTK_THEME_PATH_LIGHT=/usr/share/themes/$(dconf read /org/gnome/desktop/interface/gtk-theme | 'sed \"s+\'++\"' | 'sed \"s+\'++\"' | 'sed \"s+-Dark++\"' | 'sed \"s+-Light++\"')'-Light >> $HOME/.config/pika_theme
+pkexec /usr/lib/pika/gnome-layouts/papirus-folders -u -C yellow\
+
+if dconf read /org/gnome/desktop/interface/color-scheme | grep dark
+then
+/usr/lib/pika/gnome-layouts/libadwaita.sh dark
+else
+/usr/lib/pika/gnome-layouts/libadwaita.sh
+fi
 fi
 if [[ $1 == gnome ]]
 then
@@ -40,4 +52,10 @@ dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/day "'ad
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/night "'adw-gtk3-dark'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/day "''"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/night "''"
+echo '#! /bin/bash' > $HOME/.config/pika_theme || touch $HOME/.config/pika_theme && echo '#! /bin/bash' > $HOME/.config/pika_theme
+echo 'KVANTUM_THEME_DARK=' >> $HOME/.config/pika_theme
+echo 'KVANTUM_THEME_LIGHT=' >> $HOME/.config/pika_theme
+echo 'GTK_THEME_PATH_DARK=' >> $HOME/.config/pika_theme
+echo 'GTK_THEME_PATH_LIGHT=' >> $HOME/.config/pika_theme
+rm -rfv $HOME/.config/gtk-4.0
 fi
