@@ -28,7 +28,7 @@ echo 'KVANTUM_THEME_DARK=Orchis-dark' >> $HOME/.config/pika_theme
 echo 'KVANTUM_THEME_LIGHT=Orchis' >> $HOME/.config/pika_theme
 echo 'GTK_THEME_PATH_DARK=/usr/share/themes/$(dconf read /org/gnome/desktop/interface/gtk-theme | 'sed \"s+\'++\"' | 'sed \"s+\'++\"' | 'sed \"s+-Dark++\"' | 'sed \"s+-Light++\"')'-Dark >> $HOME/.config/pika_theme
 echo 'GTK_THEME_PATH_LIGHT=/usr/share/themes/$(dconf read /org/gnome/desktop/interface/gtk-theme | 'sed \"s+\'++\"' | 'sed \"s+\'++\"' | 'sed \"s+-Dark++\"' | 'sed \"s+-Light++\"')'-Light >> $HOME/.config/pika_theme
-pkexec /usr/lib/pika/gnome-layouts/papirus-folders -u -C yellow\
+pkexec /usr/lib/pika/gnome-layouts/papirus-folders -u -C yellow
 
 if dconf read /org/gnome/desktop/interface/color-scheme | grep dark
 then
