@@ -2,7 +2,6 @@
 gnome-extensions enable pika-darkmode@pika.com
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/manual-time-source true
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/ondemand-button-placement "'none'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/ondemand-time "'night'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/time-source "'ondemand'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/enabled true
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/enabled true
