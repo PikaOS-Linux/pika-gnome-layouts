@@ -11,6 +11,7 @@ dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/enable
 
 if [[ $1 == pika ]]
 then
+dconf write /org/pika/layouts/pika-theme 1
 dconf write /org/gnome/desktop/wm/preferences/titlebar-font "'Fira Sans Semi-Bold 10'"
 dconf write /org/gnome/desktop/sound/theme-name "'pika'"
 dconf write /org/gnome/desktop/interface/icon-theme "'Papirus'"
