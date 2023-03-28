@@ -18,15 +18,17 @@ dconf write /org/gnome/desktop/interface/icon-theme "'Papirus'"
 dconf write /org/gnome/desktop/interface/monospace-font-name "'Fira Mono 11'"
 dconf write /org/gnome/desktop/interface/document-font-name "'Roboto Slab 11'"
 dconf write /org/gnome/desktop/interface/font-name "'Fira Sans Semi-Light 10'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/manual-time-source = true
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/ondemand-button-placement = "'none'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/ondemand-time = "'night'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/time-source = "'ondemand'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/manual-time-source true
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/ondemand-button-placement "'none'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/ondemand-time "'night'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/time-source "'ondemand'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/enabled true
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/sunrise "'pika-gnome-theme'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/sunset "'pika-gnome-theme dark'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/enabled true
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/day "'Orchis-Yellow-Light'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/night "'Orchis-Yellow-Dark'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/enabled true
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/day "'Orchis-Yellow-Light'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/night "'Orchis-Yellow-Dark'"
 echo '#! /bin/bash' > $HOME/.config/pika_theme || touch $HOME/.config/pika_theme && echo '#! /bin/bash' > $HOME/.config/pika_theme
