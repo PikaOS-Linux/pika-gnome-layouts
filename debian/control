@@ -9,7 +9,6 @@ Package: pika-gnome-layouts
 Architecture: all
 Depends: pika-welcome,
 	gnome-shell-extension-arc-menu,
-	gnome-shell-extension-custom-accent-colors,
 	gnome-shell-extension-just-perfection,
 	gnome-shell-extension-launch-new-instance,
 	gnome-shell-extension-places-menu,
@@ -21,5 +20,6 @@ Depends: pika-welcome,
 	gnome-shell-extension-appindicator,
 	gnome-shell-extension-pika-darkmode,
 	dconf-cli,
-	pika-theme
+	pika-theme,
+	pika-settings
 Description: PikaOS Gnome Desktop Layouts Selector
