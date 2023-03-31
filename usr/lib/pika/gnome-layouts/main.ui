@@ -661,7 +661,7 @@
                                 <property name="valign">center</property>
                                 <property name="margin-start">5</property>
                                 <property name="margin-end">5</property>
-                                <property name="margin-top">5</property>
+                                <property name="margin-top">15</property>
                                 <property name="margin-bottom">5</property>
                                 <signal name="pressed" handler="on_pika_theme_button_pressed" swapped="no"/>
                                 <child>
@@ -711,7 +711,7 @@
                                 <property name="valign">center</property>
                                 <property name="margin-start">5</property>
                                 <property name="margin-end">5</property>
-                                <property name="margin-top">5</property>
+                                <property name="margin-top">15</property>
                                 <property name="margin-bottom">5</property>
                                 <signal name="pressed" handler="on_gnome_theme_button_pressed" swapped="no"/>
                                 <child>
