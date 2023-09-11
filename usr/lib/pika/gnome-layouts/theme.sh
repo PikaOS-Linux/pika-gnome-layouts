@@ -12,12 +12,13 @@ dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/enable
 if [[ $1 == pika ]]
 then
 dconf write /org/pika/layouts/pika-theme 1
-dconf write /org/gnome/desktop/wm/preferences/titlebar-font "'Fira Sans Semi-Bold 10'"
+gnome-extensions enable pika-darkmode@pika.com
+dconf write /org/gnome/desktop/wm/preferences/titlebar-font "'Ubuntu Bold 11'"
 dconf write /org/gnome/desktop/sound/theme-name "'pika'"
 dconf write /org/gnome/desktop/interface/icon-theme "'Papirus'"
-dconf write /org/gnome/desktop/interface/monospace-font-name "'Fira Mono 11'"
-dconf write /org/gnome/desktop/interface/document-font-name "'Roboto Slab 11'"
-dconf write /org/gnome/desktop/interface/font-name "'Fira Sans Semi-Light 10'"
+dconf write /org/gnome/desktop/interface/monospace-font-name "'Ubuntu Mono 13'"
+dconf write /org/gnome/desktop/interface/document-font-name "'Sans 11'"
+dconf write /org/gnome/desktop/interface/font-name "'Ubuntu 11'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/manual-time-source true
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/ondemand-button-placement "'none'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/ondemand-time "'night'"
@@ -26,11 +27,11 @@ dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/enabled true
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/sunrise "'pika-gnome-theme'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/sunset "'pika-gnome-theme dark'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/enabled true
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/day "'Orchis-Yellow-Light'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/night "'Orchis-Yellow-Dark'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/day "'Jasper-Yellow-Light'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/night "'Jasper-Yellow-Dark'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/enabled true
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/day "'Orchis-Yellow-Light'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/night "'Orchis-Yellow-Dark'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/day "'Jasper-Yellow-Light'"
+dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/night "'Jasper-Yellow-Dark'"
 echo '#! /bin/bash' > $HOME/.config/pika_theme || touch $HOME/.config/pika_theme && echo '#! /bin/bash' > $HOME/.config/pika_theme
 echo 'KVANTUM_THEME_DARK=Orchis-dark#' >> $HOME/.config/pika_theme
 echo 'KVANTUM_THEME_LIGHT=Orchis#' >> $HOME/.config/pika_theme
