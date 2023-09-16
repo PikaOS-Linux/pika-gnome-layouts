@@ -22,5 +22,5 @@ Depends: pika-welcome,
 	gnome-shell-extension-pop-shell | pop-shell,
 	dconf-cli,
 	pika-theme,
-	pika-settings
+	pika-gnome-settings
 Description: PikaOS Gnome Desktop Layouts Selector
