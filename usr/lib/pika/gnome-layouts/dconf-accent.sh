@@ -9,7 +9,7 @@ dconf write /org/pika/layouts/pika-theme 1
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/enabled true
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/sunrise "'pika-gnome-theme'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/sunset "'pika-gnome-theme dark'"
-if [[ $1 == Blue ]]
+if [[ $1 == Teal ]]
 then
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/day "'Jasper-Light'"
 dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/night "'Jasper-Dark'"
