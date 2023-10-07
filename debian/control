@@ -19,7 +19,6 @@ Depends: pika-welcome,
 	gnome-shell-extension-desktop-icons-ng,
 	gnome-shell-extension-appindicator,
 	gnome-shell-extension-pika-darkmode,
-	gnome-shell-extension-pop-shell | pop-shell,
 	dconf-cli,
 	pika-theme,
 	pika-gnome-settings
