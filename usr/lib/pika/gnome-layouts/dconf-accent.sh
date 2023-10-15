@@ -1,29 +1,19 @@
 #! /usr/bin/bash
-gnome-extensions enable pika-darkmode@pika.com
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/manual-time-source true
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/ondemand-button-placement "'none'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/time/time-source "'ondemand'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/enabled true
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/enabled true
-dconf write /org/pika/layouts/pika-theme 1
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/enabled true
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/sunrise "'pika-gnome-theme'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/commands/sunset "'pika-gnome-theme dark'"
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 if [[ $1 == Teal ]]
 then
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/day "'Jasper-Light'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/night "'Jasper-Dark'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/day "'Jasper-Light'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/night "'Jasper-Dark'"
+	if dconf read /org/gnome/desktop/interface/color-scheme | grep dark
+	then
+		gdbus call --session --dest 'org.gnome.Shell' --object-path '/org/gnome/Shell' --method 'org.gnome.Shell.ScreenTransition' & gsettings set org.gnome.shell.extensions.user-theme name "Jasper-Dark" && gsettings set org.gnome.desktop.interface gtk-theme "Jasper-Dark" && cp -rfv "/usr/share/themes/Jasper-Dark"/gtk-4.0 "$HOME"/.config/
+
+	else
+		gdbus call --session --dest 'org.gnome.Shell' --object-path '/org/gnome/Shell' --method 'org.gnome.Shell.ScreenTransition' & gsettings set org.gnome.shell.extensions.user-theme name "Jasper-Light" && gsettings set org.gnome.desktop.interface gtk-theme "Jasper-Light" && cp -rfv "/usr/share/themes/Jasper-Light"/gtk-4.0 "$HOME"/.config/
+	fi
 else
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/day "'Jasper-$1-Light'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/gtk-variants/night "'Jasper-$1-Dark'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/day "'Jasper-$1-Light'"
-dconf write /org/gnome/shell/extensions/nightthemeswitcher/shell-variants/night "'Jasper-$1-Dark'"
-fi
-if dconf read /org/gnome/desktop/interface/color-scheme | grep dark
-then
-pika-gnome-theme dark
-else
-pika-gnome-theme
+	if dconf read /org/gnome/desktop/interface/color-scheme | grep dark
+	then
+		gdbus call --session --dest 'org.gnome.Shell' --object-path '/org/gnome/Shell' --method 'org.gnome.Shell.ScreenTransition' & gsettings set org.gnome.shell.extensions.user-theme name "Jasper-$1-Dark" && gsettings set org.gnome.desktop.interface gtk-theme "Jasper-$1-Dark" && cp -rfv "/usr/share/themes/Jasper-$1-Dark"/gtk-4.0 "$HOME"/.config/
+	else
+		gdbus call --session --dest 'org.gnome.Shell' --object-path '/org/gnome/Shell' --method 'org.gnome.Shell.ScreenTransition' & gsettings set org.gnome.shell.extensions.user-theme name "Jasper-$1-Light" && gsettings set org.gnome.desktop.interface gtk-theme "Jasper-$1-Light" && cp -rfv "/usr/share/themes/Jasper-$1-Light"/gtk-4.0 "$HOME"/.config/
+	fi
 fi
